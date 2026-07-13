@@ -1,0 +1,17 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/egencia
+    examples: |
+      - ¿Cómo reservo un viaje?
+      - Reserva de viajes
+      - ¿Cómo compro billetes de tren?
+      - ¿Cómo compro billetes de avión?
+      - Reserva de hoteles
+      - Viajes
+      - Billetes de avión
+      - Billetes de tren
+      - Alquiler coches
+      - ¿Cómo puedo alquilar un coche?
+      - Vuelos nacionales
+      - Vuelos internacionales

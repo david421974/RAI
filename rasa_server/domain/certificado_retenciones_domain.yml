@@ -1,0 +1,8 @@
+version: "3.1"
+
+intents:
+  - certificado_retenciones
+
+responses:
+  utter_faq/certificado_retenciones:
+    - text: "" # Se deja vacío, el NLG lo rellenará

@@ -1,0 +1,14 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/motor_generativo
+    examples: |
+      - ¿Qué es el motor generativo de Capgemini?
+      - ¿Dónde está el motor generativo de Capgemini?
+      - ¿Cómo funciona el motor generativo de Capgemini?
+      - ¿Para qué sirve el motor generativo de Capgemini?
+      - ¿Cómo accedo al motor generativo de Capgemini?
+      - ¿Qué tipo de contenido puedo generar con el motor generativo de Capgemini?
+      - ¿Qué puedo hacer dentro del Motor Generativo?
+      - ¿En qué me puede a ayudar el motor generativo de Capgemini?
+  

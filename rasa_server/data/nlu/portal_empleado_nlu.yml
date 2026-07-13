@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/portal_empleado
+    examples: |
+      - ¿Qué es el portal del empleado?
+      - ¿Cómo puedo acceder al portal del empleado?
+      - ¿Qué información puedo encontrar en el portal del empleado? 
+      - ¿Qué hay en el portal del empleado?
+      - ¿Dónde está el portal del empleado?
+      - ¿Cómo accedo al Portal del Empleado de Capgemini?
+      - ¿Cuál es el enlace para acceder al portal de empleados?
+      - ¿Cuál es la URL del Portal del Empleado?
+      - Necesito el link del portal del empleado.
+

@@ -1,0 +1,19 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/bench_interproyectos
+    examples: |
+      - ¿Qué significa estar en Bench?
+      - Estoy en Bench, ¿qué tengo que hacer ahora?
+      - ¿Qué hago si estoy en el Bench?
+      - ¿Qué pasa cuando te quedas sin proyecto?
+      - ¿Qué es el bench?
+      - ¿Qué es Interproyectos?
+      - ¿Qué hago en bench?
+      - ¿Dónde puedo encontrar información sobre el Bench?
+      - Estoy en Bench
+      - Bench interproyecto
+      - Sin proyecto asignado
+      - Entre proyectos
+      - En el banquillo
+      - Esperando proyecto

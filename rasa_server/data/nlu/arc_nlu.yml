@@ -1,0 +1,11 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/arc
+    examples: |
+      - ¿Cómo accedo a CAP Gemini desde un dispositivo no corporativo?
+      - ARC portal
+      - Acceso externo a CAP Gemini
+      - ¿Cómo se accede al entorno de CAP Gemini desde el exterior?
+      - ¿Cuál es la url de ARC?
+ 

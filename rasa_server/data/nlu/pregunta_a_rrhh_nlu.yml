@@ -1,0 +1,25 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/pregunta_a_rrhh
+    examples: |
+      - ¿Qué es Pregunta a RRHH?
+      - ¿Para qué sirve la página Pregunta a RRHH?
+      - ¿Dónde puedo hacer consultas a Recursos Humanos?
+      - Quiero acceder a la plataforma Pregunta a RRHH
+      - ¿Qué puedo hacer en Pregunta a RRHH?
+      - ¿Hay una plataforma para contactar con RRHH?
+      - ¿Dónde puedo consultar documentos de RRHH?
+      - Quiero descargar documentación de Recursos Humanos
+      - Necesito acceder a documentación emitida por RRHH
+      - ¿En Pregunta a RRHH puedo descargar documentos?
+      - Busco un documento de Recursos Humanos
+      - Quiero crear un ticket para RRHH
+      - ¿Cómo puedo solicitar un servicio a RRHH?
+      - Quiero hacer una petición a Recursos Humanos
+      - ¿Dónde puedo crear un ticket para RRHH?
+      - Tengo que solicitar un servicio de RRHH
+      - ¿Cómo puedo ver el estado de mi ticket de RRHH?
+      - Quiero hacer seguimiento de una solicitud
+      - ¿Dónde consulto mis tickets de RRHH?
+      - Necesito saber en qué estado está mi solicitud a RRHH

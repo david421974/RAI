@@ -1,0 +1,20 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/visual_identity
+    examples: |
+      - ¿Cómo es la identidad visual de Capgemini?
+      - ¿Cuál es el logotipo de Capgemini?
+      - ¿Qué tipografía se utiliza en la identidad visual de Capgemini?
+      - ¿Cómo puedo acceder a los recursos de identidad visual de Capgemini?
+      - ¿Dónde puedo encontrar el manual de identidad visual de Capgemini?
+      - ¿Qué elementos componen la identidad visual de Capgemini?
+      - ¿Cómo se aplica la identidad visual de Capgemini en los materiales de marketing?
+      - ¿Qué pautas debo seguir para usar correctamente la identidad visual de Capgemini?
+      - ¿Dónde puedo descargar los archivos de identidad visual de Capgemini? 
+      - ¿Qué colores forman parte de la identidad visual de Capgemini?
+      - ¿Cuál es la firma corporativa de Capgemini para los emails?
+      - ¿Hay una Visual Identity para Capgemini Invent?
+      - ¿Hay una Visual Identity para Capgemini Engineering?
+      - ¿Hay una Visual Identity para Capgemini Sogeti?
+      - ¿Hay una Visual Identity para Capgemini Frog?

@@ -1,0 +1,61 @@
+.faq-section {
+  padding: 8px 0 24px 0;
+}
+
+.faq-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0256AE;
+  margin: 0 0 14px 0;
+}
+
+.faq-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.faq-chip {
+  padding: 10px 20px;
+  border: 1.5px solid #cce0f5;
+  border-radius: 20px;
+  background: #fff;
+  color: #0256AE;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(2, 86, 174, 0.05);
+}
+
+.faq-chip:hover {
+  background: linear-gradient(135deg, #0256AE, #1a75d2);
+  color: #fff;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(2, 86, 174, 0.25);
+}
+
+.see-more-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.see-more-btn {
+  background: none;
+  border: 1.5px solid #cce0f5;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  color: #0256AE;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.see-more-btn:hover {
+  background: #f4f8fd;
+  border-color: #0256AE;
+}

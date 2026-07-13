@@ -1,0 +1,8 @@
+version: "3.1"
+
+intents:
+  - empleo_capgemini
+
+responses:
+  utter_faq/empleo_capgemini:
+    - text: "" # Se deja vacío, el NLG lo rellenará

@@ -1,0 +1,30 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/rlpt
+    examples: |
+      - ¿Qué es la RLPT?
+      - ¿Dónde puedo encontrar información sobre la RLPT en los portales corporativos de Capgemini?
+      - ¿Qué es un Comité de Empresa?  
+      - ¿Dónde puedo contactar con el Comité de Empresa?
+      - ¿Qué Comités de Empresa hay en Capgemini?
+      - ¿Quién forma parte de los Comités de Empresa?
+      - ¿Qué información proporciona Capgemini sobre la RLPT?
+      - ¿Qué hace la representación legal de los trabajadores?
+      - ¿Qué sindicatos tienen representación en Capgemini?
+      - ¿Hay documentación corporativa de la RLPT?
+      - ¿Hay un Comité de Empresa Internacional en Capgemini?
+      - sindicatos
+      - comité de empresa
+      - representación legal de las personas trabajadoras
+      - representación sindical
+      - representación legal de los trabajadores
+
+
+  - lookup: rlpt_type
+    examples: |
+      - sindicatos
+      - comité de empresa
+      - representación legal de las personas trabajadoras
+      - representación sindical
+      - representación legal de los trabajadores

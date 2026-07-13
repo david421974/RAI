@@ -1,0 +1,29 @@
+version: "3.1"
+
+intents:
+  - compra_dias_libres
+  - si_primera_vez_compra_dias_libres
+  - no_primera_vez_compra_dias_libres
+
+slots:
+  tipo_primera_vez_compra_dias_libres:
+    type: bool
+    influence_conversation: true
+    mappings:
+      - type: from_intent
+        intent: si_primera_vez_compra_dias_libres
+        value: true
+      - type: from_intent
+        intent: no_primera_vez_compra_dias_libres
+        value: false
+
+
+responses:
+  utter_preguntar_primera_vez_compra_dias_libres:
+    - text: ""
+
+  utter_si_primera_vez_compra_dias_libres:
+    - text: ""
+
+  utter_no_primera_vez_compra_dias_libres:
+    - text: ""

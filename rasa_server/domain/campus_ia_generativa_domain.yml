@@ -1,0 +1,8 @@
+version: "3.1"
+
+intents:
+  - campus_ia_generativa
+
+responses:
+  utter_faq/campus_ia_generativa:
+    - text: "" # Se deja vacío, el NLG lo rellenará

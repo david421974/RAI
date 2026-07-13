@@ -1,0 +1,92 @@
+version: "3.1"
+
+stories:
+
+- story: consulta guiada - mudanza
+  steps:
+  - intent: consultar_permisos_retribuidos  # Usuario: "¿Qué permisos tengo?"
+  - action: utter_preguntar_tipo_permiso # Usuario: ¿De qué tipo de permiso retribuido se trata? (mudanza, matrimonio, fallecimiento familiar, deber inexcusable, etc...)
+  - intent: informar_permisos_retribuidos 
+    entities:
+    - tipo_permiso_retribuido: "mudanza"
+  - slot_was_set:
+    - tipo_permiso_retribuido: "mudanza"
+  - action: utter_info_mudanza
+
+- story: consulta guiada - matrimonio o pareja de hecho
+  steps:
+  - intent: consultar_permisos_retribuidos
+  - action: utter_preguntar_tipo_permiso
+  - intent: informar_permisos_retribuidos
+    entities:
+    - tipo_permiso_retribuido: "matrimonio"
+  - slot_was_set:
+    - tipo_permiso_retribuido: "matrimonio"
+  - action: utter_info_matrimonio
+
+- story: consulta guiada - fallecimiento familiar
+  steps:
+  - intent: consultar_permisos_retribuidos
+  - action: utter_preguntar_tipo_permiso
+  - intent: informar_permisos_retribuidos
+    entities:
+    - tipo_permiso_retribuido: "fallecimiento_familiar"
+  - slot_was_set:
+    - tipo_permiso_retribuido: "fallecimiento_familiar"
+  - action: utter_info_fallecimiento_familiar
+
+- story: consulta guiada - enfermedad de familiar"
+  steps:
+  - intent: consultar_permisos_retribuidos 
+  - action: utter_preguntar_tipo_permiso
+  - intent: informar_permisos_retribuidos
+    entities:
+    - tipo_permiso_retribuido: "enfermedad_familiar"
+  - slot_was_set:
+    - tipo_permiso_retribuido: "enfermedad_familiar"
+  - action: utter_info_enfermedad_familiar
+
+- story: consulta guiada - fuerza mayor
+  steps:
+  - intent: consultar_permisos_retribuidos
+  - action: utter_preguntar_tipo_permiso
+  - intent: informar_permisos_retribuidos
+    entities:
+    - tipo_permiso_retribuido: "fuerza_mayor"
+  - slot_was_set:
+    - tipo_permiso_retribuido: "fuerza_mayor"
+  - action: utter_info_fuerza_mayor
+
+- story: consulta guiada - deber inexcusable
+  steps:
+  - intent: consultar_permisos_retribuidos
+  - action: utter_preguntar_tipo_permiso
+  - intent: informar_permisos_retribuidos
+    entities:
+    - tipo_permiso_retribuido: "deber_inexcusable"
+  - slot_was_set:
+    - tipo_permiso_retribuido: "deber_inexcusable"
+  - action: utter_info_deber_inexcusable
+
+- story: consulta guiada - prenatales
+  steps:
+  - intent: consultar_permisos_retribuidos
+  - action: utter_preguntar_tipo_permiso
+  - intent: informar_permisos_retribuidos
+    entities:
+    - tipo_permiso_retribuido: "prenatales"
+  - slot_was_set:
+    - tipo_permiso_retribuido: "prenatales"
+  - action: utter_info_prenatales
+
+- story: consulta guiada - lactancia
+  steps:
+  - intent: consultar_permisos_retribuidos
+  - action: utter_preguntar_tipo_permiso
+  - intent: informar_permisos_retribuidos
+    entities:
+    - tipo_permiso_retribuido: "lactancia"
+  - slot_was_set:
+    - tipo_permiso_retribuido: "lactancia"
+  - action: utter_info_lactancia
+

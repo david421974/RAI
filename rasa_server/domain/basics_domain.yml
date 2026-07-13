@@ -1,0 +1,37 @@
+version: "3.1"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+intents:
+# Basics Intents
+  - greet
+  - goodbye
+  - thankyou
+# Specials Intents
+  - out_of_scope
+  - nlu_fallback
+
+responses:
+  # Basics
+  utter_greet:
+  - text: "" 
+  
+  utter_goodbye:
+  - text: ""
+
+  utter_you_are_welcome:
+  - text: ""
+
+  utter_please_rephrase:
+  - text: ""
+  utter_ask_doubt:
+  - text: ""
+
+  utter_out_of_scope:
+  - text: ""
+
+  utter_default:
+  - text: ""
+

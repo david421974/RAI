@@ -1,0 +1,43 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/concur_myexpenses
+    examples: |
+      - ¿Qué es Concur?
+      - ¿Para qué sirve Concur?
+      - ¿Qué es MyExpenses?
+      - ¿Qué es el portal Concur MyExpenses?
+      - ¿Para qué se usa MyExpenses en Capgemini?
+      - Explícame qué es Concur MyExpenses
+      - ¿Qué puedo hacer en Concur?
+      - ¿Qué es la herramienta de gastos Concur?
+      - Quiero reportar gastos de empresa
+      - ¿Dónde puedo reclamar mis gastos?
+      - Tengo que subir un gasto
+      - Necesito registrar gastos de viaje
+      - ¿Cómo reporto gastos en la empresa?
+      - ¿Dónde se gestionan los gastos corporativos?
+      - Necesito justificar un gasto
+      - ¿Cómo subo mis tickets de gastos?
+      - Quiero hacer un informe de gastos
+      - ¿Dónde solicito la aprobación de mis gastos?
+      - Quiero enviar mis gastos para aprobación
+      - ¿Dónde veo si mis gastos están aprobados?
+      - Necesito hacer seguimiento de mis gastos
+      - ¿Cómo saber si ya me van a pagar los gastos?
+      - Estado de mis gastos.
+      - Quiero comprobar el cobro de mis gastos
+      - ¿Dónde reviso el estado de un gasto?
+      - ¿Cómo accedo a Concur?
+      - ¿Dónde reportamos gastos en Capgemini?
+      - Herramienta de gastos de Capgemini
+      - Portal de gastos corporativos
+      - Aplicación de gastos de la empresa
+      - Sistema de gastos corporativos
+      - Herramienta interna para gastos
+      - Plataforma corporativa de gastos
+      - Tengo que meter unos gastos
+      - Quiero pasar unos gastos
+      - Tengo pendientes unos gastos de viaje
+      - ¿Dónde se suben los gastos?
+      - ¿Cuál es la web de gastos?

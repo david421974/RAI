@@ -1,0 +1,8 @@
+version: "3.1"
+
+intents:
+  - getreferral
+
+responses:
+  utter_faq/getreferral:
+    - text: "" # Se deja vacío, el NGL lo rellenará

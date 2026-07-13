@@ -1,0 +1,8 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/speakup
+    examples: |
+      - ¿Cómo puedo denunciar un problema?
+      - ¿Cómo voy a la herramienta de denuncia?
+      - ¿Cómo accedo a Speak UP?

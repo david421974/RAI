@@ -1,0 +1,41 @@
+<div class="messages-viewport" #viewport>
+  @if (messages.length > 0) {
+    <div class="messages-container">
+      @for (msg of messages; track msg.timestamp) {
+        <div
+          class="message-row"
+          [class.user-row]="msg.isUser"
+          [class.bot-row]="!msg.isUser"
+          [attr.data-ts]="msg.timestamp"
+        >
+          @if (!msg.isUser) {
+            <div class="msg-avatar">R</div>
+          }
+
+          <div
+            class="msg-bubble"
+            [class.user-bubble]="msg.isUser"
+            [class.bot-bubble]="!msg.isUser"
+          >
+	    <div class="msg-content" [innerHTML]="msg.text"></div>
+          </div>
+
+          @if (msg.isUser) {
+            <div class="msg-avatar user-avatar">Yo</div>
+          }
+        </div>
+      }
+
+      @if (isLoading) {
+        <div class="message-row bot-row">
+          <div class="msg-avatar">R</div>
+          <div class="msg-bubble bot-bubble loading">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      }
+    </div>
+  }
+</div>

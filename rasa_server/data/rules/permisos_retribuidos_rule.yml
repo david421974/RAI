@@ -1,0 +1,63 @@
+version: "3.1"
+
+rules:
+- rule: Pedir permisos retribuidos
+  steps:
+  - intent: pedir_permisos_retribuidos
+  - action: utter_pedir_permisos_retribuidos
+
+- rule: Respuesta Mudanza
+  steps:
+  - intent: consultar_permisos_retribuidos
+    entities: 
+    - tipo_permiso_retribuido: "mudanza"
+  - action: utter_info_mudanza
+
+- rule: Respuesta Matrimonio
+  steps:
+  - intent: consultar_permisos_retribuidos
+    entities: 
+    - tipo_permiso_retribuido: "matrimonio"
+  - action: utter_info_matrimonio
+
+- rule: Respuesta Fallecimiento familiar
+  steps:
+  - intent: consultar_permisos_retribuidos
+    entities: 
+    - tipo_permiso_retribuido: "fallecimiento_familiar"
+  - action: utter_info_fallecimiento_familiar
+
+- rule: Respuesta Enfermedad familiar
+  steps:
+  - intent: consultar_permisos_retribuidos
+    entities: 
+    - tipo_permiso_retribuido: "enfermedad_familiar"
+  - action: utter_info_enfermedad_familiar
+
+- rule: Respuesta Fuerza Mayor
+  steps:
+  - intent: consultar_permisos_retribuidos
+    entities: 
+    - tipo_permiso_retribuido: "fuerza_mayor"
+  - action: utter_info_fuerza_mayor
+
+- rule: Respuesta Deber Inexcusable
+  steps:
+  - intent: consultar_permisos_retribuidos
+    entities: 
+    - tipo_permiso_retribuido: "deber_inexcusable"
+  - action: utter_info_deber_inexcusable
+
+- rule: Respuesta Prenatales
+  steps:
+  - intent: consultar_permisos_retribuidos
+    entities: 
+    - tipo_permiso_retribuido: "prenatales"
+  - action: utter_info_prenatales
+
+- rule: Respuesta Lactancia
+  steps:
+  - intent: consultar_permisos_retribuidos
+    entities: 
+    - tipo_permiso_retribuido: "lactancia"
+  - action: utter_info_lactancia

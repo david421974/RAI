@@ -1,0 +1,39 @@
+# Node
+node_modules/
+dist/
+out-tsc/
+
+# Angular build
+.angular/cache/
+.angular/local/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+
+# Others
+coverage/
+
+# Dependency directories
+jspm_packages/
+bower_components/
+
+# Misc
+*.tgz
+*.swp
+
+# TypeScript
+*.tsbuildinfo

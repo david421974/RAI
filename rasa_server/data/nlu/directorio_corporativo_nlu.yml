@@ -1,0 +1,27 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/directorio_corporativo
+    examples: |
+      - ¿Dónde puedo encontrar el [directorio corporativo](directorio_corporativo_type)?
+      - ¿Dónde está el [directorio corporativo](directorio_corporativo_type)?
+      - ¿Cómo accedo al [directorio corporativo](directorio_corporativo_type)?
+      - Necesito el [directorio corporativo](directorio_corporativo_type).
+      - ¿Me pasas el enlace del [directorio corporativo](directorio_corporativo_type)?
+      - ¿Cuál es el link del [directorio corporativo](directorio_corporativo_type)?
+      - Busco el [directorio de empleados](directorio_corporativo_type).
+      - Quiero consultar el [directorio interno](directorio_corporativo_type).
+      - ¿Dónde está la [agenda corporativa](directorio_corporativo_type)?
+      - ¿Dónde puedo ver el [listado de empleados](directorio_corporativo_type)?
+
+  - lookup: directorio_corporativo_type
+    examples: |
+      - Directorio corporativo
+      - Directorio de empleados
+      - Directorio interno
+      - Directorio de personal
+      - Agenda corporativa
+      - Agenda de empresa
+      - Guía corporativa
+      - Guía interna
+      - Listado de empleados

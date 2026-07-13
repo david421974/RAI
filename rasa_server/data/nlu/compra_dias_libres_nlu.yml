@@ -1,0 +1,27 @@
+version: "3.1"
+
+nlu:
+  - intent: compra_dias_libres
+    examples: |
+      - ¿Cómo compro días libres?
+      - ¿Cómo solicito días libres?
+      - ¿Cómo compro días libres adicionales?
+      - ¿Cómo se compra días libres?
+      - ¿Cómo solicito días libres en BeFlex?
+      - ¿Cómo compro días libres en BeFlex?
+      - Compra de días adicionales de vacaciones
+      - Compra de días libres
+      - Comprar días libres
+      - Comprar días libres adicionales
+  - intent: si_primera_vez_compra_dias_libres
+    examples: |
+      - si
+      - claro
+      - por supuesto
+      - acepto
+  - intent: no_primera_vez_compra_dias_libres
+    examples: |
+      - no
+      - para nada
+      - no acepto
+      - negativo

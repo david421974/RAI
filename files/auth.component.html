@@ -1,0 +1,178 @@
+<div class="auth-page">
+
+  <!-- Fondo decorativo -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--left"  aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--right" aria-hidden="true"></div>
+
+  <div class="auth-card">
+
+    <!-- Cabecera ──────────────────────────────────────────────────────────── -->
+    <div class="auth-header">
+      <div class="auth-logo" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" rx="14" fill="url(#logoGrad)"/>
+          <path d="M24 13a7 7 0 0 0-7 7v2h-1a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1v-2a7 7 0 0 0-7-7zm0 2.5a4.5 4.5 0 0 1 4.5 4.5v2h-9v-2A4.5 4.5 0 0 1 24 15.5zm0 9.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z" fill="white"/>
+          <defs>
+            <linearGradient id="logoGrad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#3b82f6"/>
+              <stop offset="1" stop-color="#6366f1"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <h1 class="auth-title">Acceso seguro</h1>
+      <p class="auth-subtitle">
+        <ng-container *ngIf="step === 'email'">
+          Introduce tu correo corporativo para recibir un código de acceso
+        </ng-container>
+        <ng-container *ngIf="step === 'token'">
+          Hemos enviado un código de 6 dígitos a tu correo
+        </ng-container>
+      </p>
+    </div>
+
+    <!-- Indicador de pasos ────────────────────────────────────────────────── -->
+    <div class="steps" aria-label="Progreso de autenticación">
+      <div class="step-item" [class.step--active]="step === 'email'" [class.step--done]="step === 'token'">
+        <div class="step-dot">
+          <span *ngIf="step === 'email'">1</span>
+          <svg *ngIf="step === 'token'" viewBox="0 0 12 12" fill="none">
+            <path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="step-label">Correo</span>
+      </div>
+
+      <div class="step-connector" [class.step-connector--done]="step === 'token'"></div>
+
+      <div class="step-item" [class.step--active]="step === 'token'">
+        <div class="step-dot"><span>2</span></div>
+        <span class="step-label">Código</span>
+      </div>
+    </div>
+
+    <!-- Mensaje de éxito ──────────────────────────────────────────────────── -->
+    <div *ngIf="successMsg" class="alert alert--success" role="status">
+      <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      {{ successMsg }}
+    </div>
+
+    <!-- Mensaje de error ──────────────────────────────────────────────────── -->
+    <div *ngIf="errorMsg" class="alert alert--error" role="alert">
+      <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M8 5v3M8 10.5v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      {{ errorMsg }}
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         PASO 1 — Correo
+         ═══════════════════════════════════════════════════════════════════ -->
+    <div *ngIf="step === 'email'" class="auth-body" [@stepAnim]="step">
+
+      <div class="field-group">
+        <label class="field-label" for="emailInput">Correo corporativo</label>
+        <div class="field-wrapper">
+          <svg class="field-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M3 5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5zm0 0l7 5 7-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <input
+            id="emailInput"
+            type="email"
+            class="field-input"
+            [(ngModel)]="email"
+            placeholder="nombre@capgemini.com"
+            autocomplete="email"
+            (keydown.enter)="onRequestToken()"
+            [disabled]="loading"
+          />
+        </div>
+        <span class="field-hint">Solo se aceptan correos <strong>@capgemini.com</strong></span>
+      </div>
+
+      <button
+        class="btn btn--primary"
+        (click)="onRequestToken()"
+        [disabled]="loading || !email"
+      >
+        <span *ngIf="!loading">Enviar código de acceso</span>
+        <span *ngIf="loading" class="btn-loading">
+          <span class="spinner"></span> Enviando&hellip;
+        </span>
+      </button>
+
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         PASO 2 — Código OTP
+         ═══════════════════════════════════════════════════════════════════ -->
+    <div *ngIf="step === 'token'" class="auth-body">
+
+      <div class="email-badge">
+        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4zm0 0l7 5 7-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>{{ email }}</span>
+      </div>
+
+      <!-- Cajas OTP -->
+      <div class="otp-row" role="group" aria-label="Código de verificación de 6 dígitos">
+        <input
+          *ngFor="let v of otpValues; let i = index"
+          #otpBox
+          type="text"
+          inputmode="numeric"
+          maxlength="6"
+          class="otp-box"
+          [class.otp-box--filled]="otpValues[i] !== ''"
+          [attr.aria-label]="'Dígito ' + (i + 1)"
+          autocomplete="one-time-code"
+          [disabled]="loading"
+          (input)="onBoxInput($event, i)"
+          (keydown)="onBoxKeydown($event, i)"
+          (paste)="onBoxPaste($event)"
+        />
+      </div>
+
+      <!-- Temporizador -->
+      <p class="countdown" *ngIf="countdown > 0">
+        El código expira en <strong>{{ countdownLabel }}</strong>
+      </p>
+      <p class="countdown countdown--expired" *ngIf="countdown === 0">
+        El código ha expirado. Solicita uno nuevo.
+      </p>
+
+      <button
+        class="btn btn--primary"
+        (click)="onVerifyToken()"
+        [disabled]="loading || !otpComplete"
+      >
+        <span *ngIf="!loading">Verificar y entrar</span>
+        <span *ngIf="loading" class="btn-loading">
+          <span class="spinner"></span> Verificando&hellip;
+        </span>
+      </button>
+
+      <div class="secondary-actions">
+        <button
+          class="btn-link"
+          (click)="onResend()"
+          [disabled]="!canResend || loading"
+        >
+          Reenviar código
+        </button>
+        <span class="separator" aria-hidden="true">·</span>
+        <button class="btn-link" (click)="onBackToEmail()" [disabled]="loading">
+          Cambiar correo
+        </button>
+      </div>
+
+    </div>
+
+  </div><!-- /auth-card -->
+</div><!-- /auth-page -->

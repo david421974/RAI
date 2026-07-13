@@ -1,0 +1,10 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/numero_vacaciones
+    examples: |
+      - ¿Cúantas vacaciones me corresponden?
+      - ¿Cúantas vacaciones tengo?
+      - Días totales de vacaciones por colectivo
+
+ 

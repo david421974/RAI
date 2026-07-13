@@ -1,0 +1,11 @@
+<div class="home-container">
+  <app-welcome-message></app-welcome-message>
+
+  <app-chat-input (messageSent)="onSendMessage($event)"></app-chat-input>
+
+  <app-faq-section
+    [faqs]="faqs"
+    [loadTopIntents]="true"
+    (faqSelected)="onFaqSelected($event)"
+  ></app-faq-section>
+</div>

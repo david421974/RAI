@@ -1,0 +1,8 @@
+version: "3.1"
+
+intents:
+  - whoz
+
+responses:
+  utter_faq/whoz:
+    - text: "" # Se deja vacío, el NLG lo rellenará

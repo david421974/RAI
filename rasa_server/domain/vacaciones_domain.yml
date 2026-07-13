@@ -1,0 +1,8 @@
+version: "3.1"
+
+intents:
+  - vacaciones
+
+responses:
+  utter_faq/vacaciones:
+    - text: "" # Se deja vacío, el NGL lo rellenará

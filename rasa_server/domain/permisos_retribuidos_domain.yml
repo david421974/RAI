@@ -1,0 +1,58 @@
+version: "3.1"
+
+
+intents:
+  - pedir_permisos_retribuidos
+  - consultar_permisos_retribuidos
+  - informar_permisos_retribuidos
+
+entities:
+  - tipo_permiso_retribuido
+
+slots:
+  tipo_permiso_retribuido:
+    type: categorical
+    values:
+      - mudanza
+      - matrimonio
+      - fallecimiento_familiar
+      - enfermedad_familiar
+      - fuerza_mayor
+      - deber_inexcusable
+      - prenatales
+      - lactancia
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: tipo_permiso_retribuido
+
+responses:
+  utter_pedir_permisos_retribuidos:
+    - text: ""
+
+  utter_preguntar_tipo_permiso:
+    - text: ""
+
+  utter_info_mudanza:
+    - text: ""
+
+  utter_info_matrimonio:
+    - text: ""
+
+  utter_info_fallecimiento_familiar:
+    - text: ""
+
+  utter_info_enfermedad_familiar:
+    - text: ""
+
+  utter_info_fuerza_mayor:
+    - text: ""
+
+  utter_info_deber_inexcusable:
+    - text: ""
+
+  utter_info_prenatales:
+    - text: ""
+
+  utter_info_lactancia:
+    - text: ""

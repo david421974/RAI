@@ -1,0 +1,8 @@
+version: "3.1"
+
+intents:
+  - speakup
+
+responses:
+  utter_faq/speakup:
+    - text: "" # Se deja vacío, el NGL lo rellenará

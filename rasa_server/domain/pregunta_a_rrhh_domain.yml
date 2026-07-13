@@ -1,0 +1,8 @@
+version: "3.1"
+
+intents:
+  - pregunta_a_rrhh
+
+responses:
+  utter_faq/pregunta_a_rrhh:
+    - text: "" # Se deja vacío, el NLG lo rellenará

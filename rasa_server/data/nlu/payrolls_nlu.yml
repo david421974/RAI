@@ -1,0 +1,14 @@
+version: "3.1"
+# payrolls
+nlu:
+- intent: faq/payrolls
+  examples: |
+    - ¿Como puedo ver las nominas de Capgemini?
+    - ¿Donde puedo ver las nominas de la empresa?
+    - ¿Donde estan las nominas de la empresa?
+    - ¿Donde estan las nominas?
+    
+- lookup: payrolls_type
+  examples: |
+    - nomina
+    - payroll

@@ -1,0 +1,30 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/plan_prioridades
+    examples: |
+      - ¿Qué es el Plan de Prioridades?
+      - ¿En qué consiste el Plan de Prioridades?
+      - Quiero información sobre el Plan de Prioridades
+      - ¿Para qué sirve el Plan de Prioridades?
+      - Cómo funciona el Plan de Prioridades
+      - ¿Qué se evalúa en el Plan de Prioridades?
+      - ¿Cómo accedo al Plan de Prioridades?
+      - ¿Dónde encuentro el Plan de Prioridades?
+      - ¿Qué tipo de objetivos tiene el Plan de Prioridades?
+      - ¿Cuándo se establecen los objetivos del plan?
+      - ¿Cada cuánto se revisa el Plan de Prioridades?
+      - ¿Qué es Desempeño Continuo?
+      - ¿Dónde veo mi Plan de Prioridades actual?
+      - ¿Cuándo se evalúa el Plan de Prioridades?
+      - ¿Dónde consulto mi evaluación anual?
+      - ¿Cómo veo la calificación de fin de año?
+      - ¿Dónde están los resultados de mi revisión anual?
+      - ¿Qué pasa si mi evaluación es negativa?
+      - ¿Qué es un Back on Track Plan?
+      - ¿Qué ocurre después de una evaluación negativa?
+      - ¿Hay un plan de recuperación si la evaluación no es buena?
+      - Necesito ver mi evaluación anual
+      - No sé dónde ver mis prioridades
+      - ¿Dónde están mis objetivos de este año?
+      - Quiero consultar mi desempeño

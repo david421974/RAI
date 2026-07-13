@@ -1,0 +1,18 @@
+version: "3.1"
+
+intents:
+  - directorio_corporativo
+
+responses:
+  utter_faq/directorio_corporativo:
+    - text: ""
+
+entities:
+  - directorio_corporativo_type
+
+slots:
+  directorio_corporativo_type:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: directorio_corporativo_type

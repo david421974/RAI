@@ -1,0 +1,31 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/formacion_continua
+    examples: |
+      - ¿Qué es Formación Continua?
+      - ¿Para qué sirve Formación Continua?
+      - ¿Qué puedo encontrar en Formación Continua?
+      - ¿En qué consiste la web de Formación Continua?
+      - ¿Dónde está Formación Continua?
+      - ¿Cómo accedo a Formación Continua?
+      - ¿Formación Continua está en SharePoint?
+      - ¿Cómo entro a la plataforma de Formación Continua?
+      - ¿Dónde puedo ver los recursos de Formación Continua?
+      - ¿Qué recursos formativos hay en Formación Continua?
+      - ¿Puedo encontrar plataformas educativas en Formación Continua?
+      - ¿Formación Continua incluye certificaciones?
+      - ¿Hay comunidades de aprendizaje en Formación Continua?
+      - ¿Puedo acceder a distintas metodologías de formación?
+      - Necesito acceder a recursos de aprendizaje
+      - Quiero hacer una certificación
+      - ¿Qué formación tengo disponible?
+      - ¿Hay algún sitio con todos los cursos?
+      - ¿Dónde puedo aprender cosas nuevas?
+      - ¿Cuál es la web de formación?
+      - ¿Dónde están los recursos de aprendizaje?
+      - ¿Dónde están las certificaciones?
+      - ¿Hay cursos internos?
+      - ¿Dónde busco formación por mi perfil?
+      - ¿Qué cursos puedo hacer?
+      - ¿Formación Continua es donde están los cursos?

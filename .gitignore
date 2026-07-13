@@ -1,0 +1,16 @@
+# Rasa Server
+.config
+.env
+rasa_server/models
+rasa_server/.rasa
+rasa_server/.bash_history
+rasa_server/.config
+rasa_server/.keras
+rasa_server/domain.yml
+chatbot-ui/.editorconfig
+chatbot-ui/.vscode
+nlg_server/__pycache__
+.docker-compose.yml.swp
+traza.txt
+stats_db_data/global
+stats_db_data/base

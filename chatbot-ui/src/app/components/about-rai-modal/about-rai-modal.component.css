@@ -1,0 +1,150 @@
+/* Backdrop */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 86, 174, 0.15); /* Color corporativo con mucha más transparencia */
+  backdrop-filter: blur(3px); /* Mantiene el efecto difuminado sobre el fondo claro */
+  z-index: 2000; 
+}
+
+/* Panel central */
+.modal-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-width: 580px;
+  max-height: 85vh;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 12px 48px rgba(2, 86, 174, 0.2);
+  z-index: 2001;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: modalIn 0.2s ease-out;
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: translate(-50%, -48%) scale(0.97); }
+  to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+/* Header */
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 28px 16px;
+  flex-shrink: 0;
+  background: #f4f8fd;
+}
+
+.modal-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0256AE;
+  margin: 0;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #0256AE;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.close-btn:hover {
+  background: #cce0f5;
+}
+
+/* Body */
+.modal-body {
+  padding: 0 28px 28px;
+  overflow-y: auto;
+  flex: 1;
+  background: #f4f8fd;
+}
+
+/* Hero */
+.rai-hero {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.rai-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0256AE, #1a75d2);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  box-shadow: 0 6px 16px rgba(2, 86, 174, 0.3);
+}
+
+.rai-tagline {
+  color: #555;
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Sections */
+.rai-section {
+  margin-bottom: 24px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e6f0fa;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.rai-section h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0256AE;
+  margin: 0 0 12px;
+}
+
+.rai-section p {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Feature list */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.feature-list li {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+  padding: 10px 14px;
+  background: #f4f8fd;
+  border-left: 4px solid #0256AE; /* Borde izquierdo corporativo */
+  border-radius: 4px 8px 8px 4px;
+  line-height: 1.4;
+}
+
+.feature-list li::before {
+  display: none;
+}

@@ -1,0 +1,24 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/fundacion_capgemini
+    examples: |
+      - ¿Qué es la Fundación Capgemini?
+      - Información sobre la Fundación Capgemini
+      - ¿Qué hace la Fundación Capgemini?
+      - ¿Para qué sirve la Fundación Capgemini?
+      - ¿La Fundación Capgemini es sin ánimo de lucro?
+      - ¿A qué se dedica la Fundación Capgemini?
+      - ¿Qué proyectos desarrolla la Fundación Capgemini?
+      - ¿La Fundación Capgemini hace voluntariado?
+      - ¿Qué tipo de consultoría ofrece la Fundación Capgemini?
+      - ¿Qué iniciativas impulsa la Fundación Capgemini en España?
+      - ¿Cómo puedo participar en la Fundación Capgemini?
+      - ¿Puedo colaborar con la Fundación Capgemini?
+      - ¿Dónde encuentro información sobre de la Fundación Capgemini?
+      - ¿Qué es la Comunidad Fundación Capgemini?
+      - ¿Dónde puedo encontrar más información sobre la Fundación Capgemini?
+      - ¿Tiene web la Fundación Capgemini?
+      - ¿La Fundación Capgemini tiene una comunidad interna?
+      - ¿Dónde consultar los proyectos de la Fundación Capgemini?
+      - ¿Hay información de la Fundación Capgemini en Daily?

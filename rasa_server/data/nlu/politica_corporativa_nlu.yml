@@ -1,0 +1,52 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/politica_corporativa_que_es
+    examples: |
+      - ¿Qué es la política corporativa?
+      - ¿Para qué sirve la política corporativa?
+      - ¿Cuáles son las políticas corporativas de Capgemini?
+      - ¿Cuál es la política ambiental de Capgemini?
+      - ¿Cuál es la política anticorrupción de Cagemini?
+      - ¿Cuál es la política ética en los negocios de Capgemini?
+      - ¿Cuál es la política sobre la Competencia de Capgemini?
+      - ¿Cuál es la política de Conflicto de intereses de Capgemini?
+      - ¿Cuál es la política sobre los Derechos Humanos de Capgemini?
+      - ¿Cuál es la política sobre la diversidad e inclusión de Capgemini?
+      - ¿Cuál es la política sobre la seguridad de la información de Capgemini?
+      - ¿Cuál es la normativa de conducta respecto a los proveedores de Capgemini?
+      - ¿Cuál es la política de protección de datos de Capgemini?
+      - ¿Cuál es la política sobre la Caliad de Capgemini?
+
+  - intent: faq/politica_corporativa_donde_esta
+    examples: |
+      - ¿Dónde encuentro la política corporativa?
+      - ¿Dónde puedo acceder a la política corporativa?
+      - ¿Dónde está la política corporativa?
+      - ¿Cómo accedo a la política corporativa?
+      - ¿Dónde tengo que ir para usar la política corporativa?
+      - ¿En qué sitio puedo encontrar la política corporativa?
+      - ¿Dónde se encuentra la política corporativa?
+      - ¿Cómo hago para entrar a la política corporativa?
+      - ¿Dónde se supone que está la política corporativa?
+      - ¿Cómo entro en la política corporativa?
+      - ¿Dónde puedo ver la política corporativa?
+      - ¿Dónde tengo que meterme para usar la política corporativa?
+      - ¿Dónde tengo que meterme para acceder a la política corporativa?
+      - ¿Dónde tengo que meterme para entrar a la política corporativa?
+      - No encuentro la política corporativa de Capgemini ¿dónde está?
+
+  - lookup : politica_corporativa_type
+    examples: |
+      - política corporativa
+      - política ambiental
+      - política anticorrupción
+      - política ética en los negocios
+      - política sobre la Competencia
+      - política de Conflicto de intereses
+      - política sobre los Derechos Humanos
+      - política sobre la diversidad e inclusión
+      - política sobre la seguridad de la información
+      - normativa de conducta respecto a los proveedores
+      - política de protección de datos
+      - política sobre la Calidad   

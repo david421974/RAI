@@ -1,0 +1,61 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/daily_que_es
+    examples: |
+      - ¿Qué es Daily?
+      - ¿Para qué sirve Daily?
+      - ¿Cómo funciona Daily?
+      - ¿Cómo puedo usar Daily?
+      - ¿Cuál es la función principal de Daily?
+      - ¿Qué tipo de plataforma es Daily?
+      - ¿Explícame qué es Daily?
+      - ¿Qué beneficios tiene usar Daily?
+
+
+  - intent: faq/daily_donde_esta
+    examples: |
+      - ¿Dónde encuentro Daily?
+      - ¿Dónde puedo acceder a Daily?
+      - ¿Dónde está la plataforma Daily?
+      - ¿Cómo accedo a Daily?
+      - ¿Dónde tengo que ir para usar Daily?
+      - ¿En qué sitio puedo encontrar Daily?
+      - ¿Dónde se encuentra Daily?
+      - ¿Cómo hago para entrar a Daily?
+      - ¿Dónde se supone que está Daily?
+      - ¿Cómo entro en Daily?
+      - ¿Dónde puedo ver Daily?
+      - ¿Dónde tengo que meterme para usar Daily?
+      - ¿Dónde tengo que meterme para acceder a Daily?
+      - ¿Dónde tengo que meterme para entrar a Daily?
+
+  - intent: faq/daily_herramientas
+    examples: |
+      - ¿Qué herramientas hay en Daily?
+      - ¿Qué funcionalidades tiene Daily?
+      - ¿Qué opciones ofrece Daily?
+      - ¿Qué características tiene Daily?
+      - ¿Qué tipo de herramientas puedo encontrar en Daily?
+      - ¿Qué recursos están disponibles en Daily?
+      - ¿Qué servicios proporciona Daily?
+      - ¿Qué puedo hacer con Daily?
+
+  - lookup : daily_type
+    examples: |
+      - Daily
+      - Herramientas de Daily
+      - Funcionalidades de Daily
+      - Opciones de Daily
+      - Características de Daily
+      - Recursos de Daily
+      - Servicios de Daily
+  
+
+  
+
+
+
+
+
+

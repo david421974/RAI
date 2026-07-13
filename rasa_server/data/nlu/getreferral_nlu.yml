@@ -1,0 +1,11 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/getreferral
+    examples: |
+      - ¿Cómo paso el curriculum de un amigo?
+      - Recomendación
+      - ¿Cómo recomiendo a un amigo?
+      - ¿Cómo recomiendo a un conocido?
+      - ¿Cómo entro en GetReferral?
+ 

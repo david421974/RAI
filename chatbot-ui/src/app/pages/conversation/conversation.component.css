@@ -1,0 +1,45 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.conversation-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.messages-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px 10%;
+}
+
+.messages-area::-webkit-scrollbar {
+  width: 6px;
+}
+
+.messages-area::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.messages-area::-webkit-scrollbar-thumb {
+  background: #cce0f5;
+  border-radius: 10px;
+}
+
+.input-area {
+  padding: 0 10% 20px;
+  flex-shrink: 0;
+  background: transparent; /* El fondo lo da el main pastel */
+}
+
+@media (max-width: 768px) {
+  .messages-area {
+    padding: 16px 4%;
+  }
+  .input-area {
+    padding: 0 4% 16px;
+  }
+}

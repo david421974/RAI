@@ -1,0 +1,32 @@
+version: "3.1"
+nlu:
+- intent: faq/internal_job_openings
+  examples: |
+    - ¿Dónde puedo ver las vacantes internas de la empresa?
+    - ¿En qué portal se publican las ofertas de trabajo?
+    - ¿Dónde encuentro las posiciones abiertas?
+    - ¿Cómo puedo solicitar un cambio de puesto?
+    - ¿Qué tengo que hacer para ver las oportunidades de empleo internas?
+    - ¿Dónde puedo encontrar vacantes internas de otro país?
+    - ¿Cómo puedo ver las ofertas laborales internas?
+    - ¿Cómo puedo saber qué puestos hay disponibles?
+    - ¿Dónde puedo consultar oportunidades profesionales?
+    - ¿En qué plataforma se publican los puestos disponibles?
+
+- lookup: internal_job_openings_type
+  examples: |
+    - Vacantes
+    - Movilidad
+    - Posiciones
+    - Oportunidades
+
+- intent: faq/mobility_policy
+  examples: |
+    - ¿Cuál es la política de movilidad de la empresa?
+    - ¿Qué normas tenemos sobre cambiar de puesto de trabajo?
+    - ¿Puedo moverme a otro puesto o departamento?
+    - ¿Existe alguna política sobre movimientos internos?
+    - Me gustaría saber cuáles son las reglas de movilidad interna.
+    - ¿Hay alguna norma para cambiar de puesto?
+
+

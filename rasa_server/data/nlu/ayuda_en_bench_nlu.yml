@@ -1,0 +1,35 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/ayuda_en_bench
+    examples: |
+      - Estoy en Bench y tengo dudas
+      - Estoy en Bentch y necesito ayuda
+      - ¿Con quién contacto estando en Bench?
+      - ¿A quién contacto si estoy en Bench?
+      - Necesito ayuda estando en Bench.
+      - ¿Dónde puedo informarme mientras estoy en Bench?
+      - ¿Qué recursos tengo disponibles en Bench?
+      - ¿Hay algún contacto para dudas en Bench?
+      - ¿Dónde puedo preguntar por nuevas oportunidades de proyecto?
+      - ¿Cómo contacto con Personal?
+      - ¿A qué correo escribo para temas de staffing?
+      - ¿Cómo contacto con el equipo de Staffing?
+      - Tengo una duda de RRHH estando en Bench.
+      - ¿Cómo puedo contactar con Recursos Humanos?
+      - ¿A qué correo escribo para temas de RRHH?
+      - Tengo preguntas sobre mi situación laboral en Bench.
+      - ¿Existe alguna plataforma para hablar con RRHH?
+      - Necesito ayuda de Recursos Humanos.
+      - ¿Dónde gestiono mis dudas de RRHH?
+      - Necesito ayuda y no sé a quién escribir.
+      - Tengo una duda y estoy en Bench.
+      - ¿Podéis indicarme los contactos disponibles en Bench?
+      - ¿Cómo puedo resolver mis dudas estando sin proyecto?
+      - Oye, estoy en Bench… ¿qué hago?
+      - Ando en Bench y tengo dudas
+      - Estoy sin proyecto, ¿a quién pregunto?
+      - ¿Hay alguien que me pueda orientar estando en Bench?
+      - Estoy un poco perdido en Bench, ¿con quién hablo?
+      - ¿Dónde pregunto cosas si estoy en Bench?
+      - ¿Hay algún contacto para los que estamos en Bench?

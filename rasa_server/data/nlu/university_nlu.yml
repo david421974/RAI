@@ -1,0 +1,21 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/university
+    examples: |
+      - ¿Qué es la Universidad de Capgemini?
+      - ¿Qué es Capgemini University?
+      - ¿Para qué sirve Capgemini University?
+      - ¿Qué ofrece Capgemini University?
+      - ¿Qué puedo hacer en Capgemini University?
+      - Quiero información sobre Capgemini University
+      - ¿Hay cursos en Capgemini University?
+      - ¿Qué tipo de cursos hay en Capgemini University?
+      - ¿Capgemini tiene una plataforma de formación?
+      - ¿Dónde puedo formarme dentro de Capgemini?
+      - ¿Puedo hacer cursos online en Capgemini University?
+      - ¿Cómo funciona Capgemini University?
+      - ¿Capgemini University está accesible siempre?
+      - ¿Capgemini colabora con universidades?
+      - ¿Hay contenido actualizado en Capgemini University?
+      - ¿La formación se adapta a mi puesto?

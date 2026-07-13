@@ -1,0 +1,8 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/solicitud_flexabroad
+    examples: |
+      - ¿Cómo accedo a FlexAbroad?
+      - ¿Cómo puedo trabajar desde el extranjero?
+  

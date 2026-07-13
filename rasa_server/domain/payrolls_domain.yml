@@ -1,0 +1,9 @@
+version: "3.1"
+
+intents:
+  - payrolls
+
+responses:
+  # Payrolls
+  utter_faq/payrolls:
+    - text: "" # Se deja vacío, el NLG lo rellenará

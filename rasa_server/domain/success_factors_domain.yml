@@ -1,0 +1,8 @@
+version: "3.1"
+
+intents:
+  - success_factors
+
+responses:
+  utter_faq/success_factors:
+    - text: "" # Se deja vacío, el NLG lo rellenará

@@ -1,0 +1,13 @@
+version: "3.1"
+intents:
+  - internal_job_openings
+  - mobility_policy
+
+entities:
+  - internal_job_openings_type
+
+responses:
+  utter_faq/internal_job_openings:
+    - text: ""
+  utter_faq/mobility_policy:
+    - text: ""

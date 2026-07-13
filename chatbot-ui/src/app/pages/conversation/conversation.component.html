@@ -1,0 +1,12 @@
+<div class="conversation-container">
+  <div class="messages-area" #messagesArea>
+    <app-chat-messages
+      [messages]="messages"
+      [isLoading]="isLoading"
+    ></app-chat-messages>
+  </div>
+
+  <div class="input-area">
+    <app-chat-input [showLabel]="false" (messageSent)="onSendMessage($event)"></app-chat-input>
+  </div>
+</div>

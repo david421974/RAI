@@ -1,0 +1,30 @@
+version: "3.1"
+
+## Basics Rules
+rules:
+- rule: always respond to the greeting
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: always respond to goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: always respond to thank yous
+  steps:
+  - intent: thankyou
+  - action: utter_you_are_welcome
+
+## Specials Rules
+- rule: Handling messages I don't understand (Fallback)
+  steps:
+  # Fallback comes from ambiguity in the question, jumping from ambiguity_threshold in config.yml
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
+
+- rule: Responding to things out of scope
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope

@@ -1,0 +1,2 @@
+﻿utter_faq/sso_saml;"<b>SSO</b> <i>(Single Sign-On)</i> es un sistema de autenticación seguro que permite a los usuarios acceder a varias aplicaciones usando un solo usuario y contraseña.
+SSO con <b>SAML</b> <i>(Security Assertion Markup Language)</i> es un tipo de SSO que permite entrar en distintas aplicaciones web con las mismas credenciales. Para hacerlo, utiliza un estándar que envía la información de inicio de sesión entre dos partes: normalmente un proveedor de identidad y la aplicación web a la que se accede."

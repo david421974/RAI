@@ -1,0 +1,24 @@
+<section class="chat-input-section">
+  @if (showLabel) {
+    <h2 class="input-label">¿En qué puedo ayudarte?</h2>
+  }
+  <div class="input-wrapper">
+    <textarea
+      class="chat-textarea"
+      [(ngModel)]="userInput"
+      (keydown)="onKeydown($event)"
+      placeholder="Escribe tu mensaje aquí..."
+      rows="3"
+    ></textarea>
+    <button
+      class="send-btn"
+      (click)="onSend()"
+      [disabled]="!userInput.trim()"
+      aria-label="Enviar mensaje"
+    >
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="currentColor"/>
+      </svg>
+    </button>
+  </div>
+</section>

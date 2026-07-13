@@ -1,0 +1,26 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/next
+    examples: |
+      - ¿Qué es NEXT?
+      - ¿Qué es NEXT de Capgemini?
+      - ¿Qué es la plataforma NEXT?
+      - ¿Dónde está NEXT?
+      - ¿Dónde encuentro la web de cursos de Capgemini?
+      - ¿Dónde encuentro la web de formación de Capgemini?
+      - ¿Para qué sirve NEXT en Capgemini?
+      - Explícame qué es NEXT
+      - Información sobre la plataforma NEXT
+      - ¿Qué puedo hacer en NEXT?
+      - ¿Dónde está la formación corporativa?
+      - Plataforma de aprendizaje NEXT
+      - Acceder a la plataforma NEXT
+      - ¿NEXT tiene cursos de formación?
+      - ¿Puedo hacer cursos en NEXT?
+      - ¿NEXT tiene itinerarios formativos?
+      - ¿NEXT ofrece aprendizaje personalizado?
+      - ¿Qué tipo de cursos hay en NEXT?
+      - Catálogo de cursos de NEXT
+      - Quiero información sobre NEXT
+      - ¿Qué es NEXT y para quién es?

@@ -1,0 +1,58 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hola
+    - buenas
+    - buenos días
+    - buenas tardes
+    - holi
+    - hey
+    - qué tal
+    - saludos
+    - qué pasa
+    - hola bot
+    - buenos dias
+    - hi
+
+- intent: goodbye
+  examples: |
+    - Adios
+    - Hasta luego
+    - Me voy
+    - Chao
+    - bueno gracias por la paciencia, hasta luego
+    - vale adios
+    - vale, hasta luego
+    - perfecto, nos vemos
+    - de acuerdo, adiós
+    - muy bien, hasta la próxima
+
+- intent: thankyou
+  examples: |
+    - Gracias
+    - Muchas gracias
+    - Te lo agradezco
+    - gracias por todo
+    - vale gracias
+    - muchas gracias, eres un sol
+    - gracias por resolverme la duda 
+    - ok gracias por reolsver mis dudas
+
+- intent: out_of_scope
+  examples: |
+    - quiero montar en coche
+    - quiero ir al baño
+    - quiero jugar al fútbol
+    - me gusta tu madre
+    - qué hora es
+    - cómo te llamas
+    - quiero comprar unos zapatos
+    - me duele la cabeza
+    - quiero dormir
+    - esto no funciona
+    - eres tonto
+    - quiero ir a la playa
+    - reservar una mesa
+    - alquilar un coche

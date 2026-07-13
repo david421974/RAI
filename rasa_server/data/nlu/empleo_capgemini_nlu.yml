@@ -1,0 +1,33 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/empleo_capgemini
+    examples: |
+      - ¿Qué ofertas de empleo tiene Capgemini?
+      - Dónde encuentro las ofertas de empleo de Capgemini?
+      - Quiero ver ofertas de empleo en Capgemini
+      - ¿Dónde puedo encontrar trabajo en Capgemini?
+      - Buscar empleo en Capgemini
+      - Ver vacantes en Capgemini
+      - Ofertas de trabajo de Capgemini
+      - Quiero consultar las ofertas de trabajo
+      - Trabajar en Capgemini
+      - Ofertas de trabajo internacionales en Capgemini
+      - Empleo en Capgemini fuera de España
+      - Acceder al portal de oportunidades internas
+      - Oportunidades internas en Capgemini
+      - Portal de empleo interno de Capgemini
+      - Buscar empleo interno en Capgemini
+      - Ofertas internas en SuccessFactors
+      - Acceder a Success Factor para ver vacantes
+      - Cambiar de puesto dentro de Capgemini
+      - Empleo en Spain en Capgemini
+      - Ofertas de empleo en España en Capgemini
+      - Buscar trabajo en Capgemini España
+      - Vacantes internas en España
+      - Empleo interno en Capgemini España
+      - ¿Dónde veo las ofertas internas?
+      - ¿Cómo accedo a las oportunidades internas?
+      - ¿Hay ofertas de empleo para empleados?
+      - Quiero ver puestos disponibles en España
+      - ¿Cómo consultar las vacantes de Capgemini?

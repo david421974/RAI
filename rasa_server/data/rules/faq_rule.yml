@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+## FAQs Rule
+- rule: Responder a todas las FAQs
+  steps:
+    - intent: faq
+    - action: utter_faq

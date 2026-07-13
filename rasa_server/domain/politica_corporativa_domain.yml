@@ -1,0 +1,14 @@
+version: "3.1"
+
+intents:
+  - politica_corporativa_que_es
+  - politica_corporativa_donde_esta
+  
+entities:
+  - politica_corporativa_type
+
+responses:
+  utter_faq/politica_corporativa_que_es:
+    - text: ""
+  utter_faq/politica_corporativa_donde_esta:
+    - text: ""

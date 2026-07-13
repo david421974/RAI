@@ -1,0 +1,47 @@
+﻿utter_pedir_permisos_retribuidos;"Estos son los pasos para solicitar permisos retribuidos (y los supuestos que dan derecho a ausentarse del trabajo, previo aviso y justificación):
+
+Desde cualquier navegador, dirígete a https://login.replicon.com/DefaultV2.aspx?companykey=Capgemini&msg=&code=PleaseLoginToContinue&init=
+
+En esta página verás que hay un botón que pone <Inicie sesión son SALM> o bien <Sign in with SAML>. Pulsa ese botón.
+
+En el panel de la izquierda, pasa el ratón por encima y después pincha en <My Replicon>
+En el panel superior pincha en <Time off>.
+En la nueva ventana selecciona <Book Time Off>.
+
+Selecciona del desplegable el tipo de permiso que deseas:
+[ESP] Matrimonio (AP). Cuando la persona trabajadora se casa o registra como pareja de hecho, tiene derecho a 15 días naturales.
+[ESP] Enfermedad o Accidente grave familiar. Se incluye en ese concepto: accidente o enfermedad grave, hospitalización o intervención quirúrgica sin hospitalización que precise reposo domiciliario del cónyuge, pareja de hecho o parientes hasta el segundo grado de consanguinidad o afinidad, así como de cualquier otra persona distinta de las anteriores, que conviva con la persona trabajadora en el mismo domicilio y que requiera el cuidado efectivo de aquella: la persona trabajadora tiene derecho a 5 días laborables.
+[ESP] Fallecimiento Familiar Primer Grado (AP). La persona trabajadora tiene derecho a 4 días laborables, incluyéndose en este tiempo los posibles desplazamientos.
+[ESP] Fallecimiento Familiar Segundo Grado (<200 Km) (AP). La persona trabajadora tiene derecho a 2 días laborables.
+[ESP] Fallecimiento Familiar Segundo Grado (>200 Km) (AP). La persona trabajadora tiene derecho a 2 días laborables. Sumando otros dos cuando se necesite hacer un desplazamiento superior a 200 Km.
+[ESP] Cambio de domicilio - Mudanza (AP). La persona trabajadora tiene derecho a un día laborable.
+[ESP] Cumplimiento del Deber (AP). La persona trabajadora tiene derecho al tiempo imprescindible para cumplir con dicha obligación.
+[ESP] Exámenes. La persona trabajadora tiene derecho al tiempo imprescindible para cumplir con dicha obligación.
+[ESP] Clases prenatales (AP). Ambas personas progenitoras tienen derecho al tiempo imprescindible para su realización.
+[ESP] Trámites Adopción (AP). Asistencia a las preceptivas sesiones de información y preparación para la realización de los preceptivos informes psicológicos y sociales previos a la declaración de idoneidad, en los casos de adopción, guarda con fines de adopción o acogimiento, siempre que deban tener lugar dentro de la jornada de trabajo: tendrá derecho al tiempo imprescindible para su realización.
+[ESP] Lactancia (horas) (AP). Las personas trabajadoras para el cuidado del lactante hasta que cumpla nueve meses tendrán derecho a una hora de ausencia al trabajo que podrán dividir en dos fracciones.
+[ESP] Lactancia (días laborables) (AP). Las personas trabajadoras podrán sustituir este derecho por su acumulación en jornadas completas. En el caso de partos múltiples, el descanso será ampliado proporcionalmente al número de hijos. Se deberá aportar como justificante el modelo de solicitud de Lactancia Acumulada de Capgemini, debidamente cumplimentado.
+[ESP] Fuerza mayor por motivos familiares urgentes (AP). Las personas trabajadoras tendrán derecho a ausentarse del trabajo por causa de fuerza mayor, cuando sea necesario por motivos familiares urgentes, relacionados con familiares o personas convivientes, en caso de enfermedad o accidente que hagan indispensable su presencia inmediata. Serán retribuidas las horas de ausencia equivalentes a cuatro días al año, debiendo aportar las personas trabajadoras acreditación del motivo de su ausencia.
+[ESP] Permiso Climático (AP). Imposibilidad de acceso al centro de trabajo o de tránsito por las vías de circulación necesarias para acudir al mismo. La persona trabajadora tiene derecho a un permiso de hasta cuatro días laborables. Transcurridos los cuatro días, el permiso se prolongará hasta que desaparezcan las circunstancias que lo justificaron, sin perjuicio de la posibilidad de la empresa de aplicar una suspensión del contrato de trabajo o una reducción de jornada derivada de fuerza mayor.
+[ESP] Be Flex.
+[ESP] Consulta médica
+[ESP] Enfermedad (con baja)
+[ESP] Enfermedad (sin baja)
+[ESP] Enfermedad Pago Directo
+[ESP] Accidente Laboral (con baja)
+[ESP] Accidente Laboral (sin baja)
+
+Selecciona la fecha de comienzo del permiso y la fecha de finalización.
+
+Adjunta el documento Justificante de la solicitud de permiso realizada.
+
+Añade comentarios si lo ves necesario.
+Cuando hayas terminado pulsa el botón <Submit for Approval> y ya estaría solicitado el permiso. Repite la operación si tienes más periodos de vacaciones u otras ausencias a solicitar. "
+utter_preguntar_tipo_permiso;¿De qué tipo de permiso retribuido se trata? (mudanza, matrimonio, fallecimiento, deber inexcusable, etc...)
+utter_info_mudanza;Por traslado de domicilio habitual (mudanza) te corresponde 1 día laborable.
+utter_info_matrimonio;Por matrimonio o registro de pareja de hecho te corresponden 15 días naturales.
+utter_info_fallecimiento_familiar;Por fallecimiento de familiar hasta segundo grado tienes 2 días (4 si requiere desplazamiento).
+utter_info_fuerza_mayor;Tienes derecho a permiso por fuerza mayor familiar urgente (hasta 4 días al año por motivos familiares imprevisibles).
+utter_info_deber_inexcusable;El tiempo indispensable para el cumplimiento de un deber inexcusable de carácter público o personal (ej: jurado, renovación DNI).
+utter_info_prenatales;Tienes permiso por el tiempo indispensable para exámenes prenatales y técnicas de preparación al parto.
+utter_info_lactancia;Tienes permiso para el cuidado del lactante hasta que cumpla nueve meses, tendrás derecho a una hora de ausencia al trabajo que podrán dividir en dos fracciones.

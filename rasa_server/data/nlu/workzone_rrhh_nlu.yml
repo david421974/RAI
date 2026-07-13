@@ -1,0 +1,30 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/workzone_rrhh
+    examples: |
+      - ¿Qué es Workzone RRHH?
+      - ¿Qué es la Zona de RRHH?
+      - ¿Para qué sirve la Work Zone?
+      - ¿Qué puedo hacer en la Zona de RRHH?
+      - Necesito acceder a la Zona de RRHH
+      - ¿Dónde está la plataforma de RRHH?
+      - Quiero entrar en la Work Zone
+      - Busco la plataforma de comunicación con RRHH
+      - ¿Qué servicios ofrece la Zona de RRHH?
+      - Quiero consultar la base de conocimiento de RRHH
+      - ¿Dónde encuentro información de RRHH?
+      - Necesito hacer varias gestiones de RRHH
+      - Busco una plataforma para temas de RRHH
+      - Necesito entrar en la Zona de RRHH
+      - ¿Dónde gestiono todo lo relacionado con RRHH?
+      - Busco la plataforma interna de RRHH
+      - Quiero acceder al portal de RRHH
+      - ¿Dónde puedo hacer gestiones de Recursos Humanos?
+      - Necesito la plataforma corporativa de RRHH
+      - ¿Cómo accedo a los servicios de RRHH?
+      - Quiero consultar cosas de RRHH
+      - Portal corporativo de Recursos Humanos
+      - Plataforma interna de RRHH para empleados
+      - Página de RRHH para empleados
+      - Sitio web interno de RRHH

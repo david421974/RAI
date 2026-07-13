@@ -1,0 +1,8 @@
+version: "3.1" 
+
+intents:
+  - university
+
+responses:
+  utter_faq/university:
+    - text: "" # Se deja vacío, el NLG lo rellenará

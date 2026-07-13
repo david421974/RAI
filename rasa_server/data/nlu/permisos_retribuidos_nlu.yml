@@ -1,0 +1,184 @@
+version: "3.1"
+
+nlu:
+
+- intent: pedir_permisos_retribuidos
+  examples: |
+    - ¿Como pido dias por [mudanza](tipo_permiso_retribuido)?
+    - ¿Como pido dias por [matrimonio](tipo_permiso_retribuido)?
+    - ¿Como pido dias por [fallecimiento](tipo_permiso_retribuido)?
+    - ¿Como pido dias por [enfermedad de familiar](tipo_permiso_retribuido)?
+    - ¿Como pido dias por [lactancia](tipo_permiso_retribuido)?
+    - ¿Como pido dias por [fuerza mayor](tipo_permiso_retribuido)?
+    - ¿Como pido dias por [deber inexcusable](tipo_permiso_retribuido)?
+    - ¿Como pido dias por [prenatales](tipo_permiso_retribuido)?
+    - ¿Como pido dias por [lactancia](tipo_permiso_retribuido)?
+    - ¿Como pido dias por [examenes](tipo_permiso_retribuido)?
+    - ¿Como pido dias por [ausencia por hospitalizacion de familiar](tipo_permiso_retribuido)?
+    - ¿Como pido dias por [hospitalizacion de familiar](tipo_permiso_retribuido)?
+    - ¿Como pido dias si tengo que hacer un [examen](tipo_permiso_retribuido)?
+    - ¿Como pido dias si tengo una [enfermedad de familiar](tipo_permiso_retribuido)?
+    - ¿Cómo pido el permiso de [ausencia por enfermedad de familiar](tipo_permiso_retribuido)?
+    - Quiero solicitar la [lactancia](tipo_permiso_retribuido) acumulada
+
+- intent: consultar_permisos_retribuidos
+  examples: |
+    - [mudanza](tipo_permiso_retribuido)
+    - [matrimonio](tipo_permiso_retribuido)
+    - [fallecimiento de familiar](tipo_permiso_retribuido)
+    - [enfermedad de familiar](tipo_permiso_retribuido)
+    - [fuerza mayor](tipo_permiso_retribuido)
+    - [deber inexcusable](tipo_permiso_retribuido)
+    - [prenatales](tipo_permiso_retribuido)
+    - [lactante](tipo_permiso_retribuido)
+    - ¿A qué permisos retribuidos tengo derecho?
+    - ¿Qué dice el convenio sobre las ausencias pagadas?
+    - Necesito información sobre los permisos de la empresa
+    - ¿Cuántos días de permiso tengo por [mudanza](tipo_permiso_retribuido)?
+    - ¿Cuántos días me corresponden de permiso?
+    - ¿Cuántos días dan por [matrimonio](tipo_permiso_retribuido)?
+    - ¿Cuántos días dan por [registro civil](tipo_permiso_retribuido)?
+    - ¿Cuántos días por [defunción](tipo_permiso_retribuido) de un pariente?
+    - ¿Cuántos días por [deber inexcusable](tipo_permiso_retribuido)?
+    - ¿Cuántos días tengo por [matrimonio](tipo_permiso_retribuido)?
+    - Tengo una [urgencia familiar](tipo_permiso_retribuido) por un tema médico
+    - Tengo [clases de preparación al parto](tipo_permiso_retribuido)
+    - Tengo una [citación judicial](tipo_permiso_retribuido) y tengo que ir al juzgado
+    - Tengo que ir a [renovar el DNI](tipo_permiso_retribuido) en horario laboral
+    - Me cambio de casa, ¿tengo días libres? [traslado de domicilio](tipo_permiso_retribuido)
+    - Me voy a casar, ¿qué permiso hay? [boda](tipo_permiso_retribuido)
+    - Se ha muerto un familiar, ¿qué días tengo? [fallecimiento](tipo_permiso_retribuido)
+    - Necesito ir a [exámenes prenatales](tipo_permiso_retribuido) esta tarde
+    - ¿Cómo funciona el permiso por [lactante](tipo_permiso_retribuido)?
+    - ¿Qué permiso hay por ser [jurado](tipo_permiso_retribuido) en un juicio?
+    - Me he hecho [pareja de hecho](tipo_permiso_retribuido)
+
+
+- intent: informar_permisos_retribuidos
+  examples: |
+    - es por mudanza
+    - por matrimonio
+    - fallecimiento de un familiar
+    - enfermedad de un familiar
+    - por fuerza mayor
+    - deber inexcusable
+    - cita prenatal
+    - permiso de lactancia
+
+
+# ------------------------------------------------------------------
+# 1. SINÓNIMOS: Mapeamos variaciones al nombre "oficial" (canónico)
+# ------------------------------------------------------------------
+- synonym: mudanza
+  examples: |
+    - cambio de casa
+    - traslado de domicilio habitual
+    - nuevo piso
+    - traslado de vivienda
+    - traslado de domicilio
+
+- synonym: matrimonio
+  examples: |
+    - boda
+    - casamiento
+    - pareja de hecho
+    - registro civil
+    - enlace
+
+- synonym: fallecimiento de familiar
+  examples: |
+    - muerte de familiar
+    - defunción de familiar
+    - entierro de familiar
+    - sepelio de familiar
+    - pérdida de un familiar
+
+- synonym: enfermedad de familiar
+  examples: |
+    - hospitalizacion de familiar
+    - ausencia por hospitalizacion de familiar
+
+- synonym: fuerza mayor
+  examples: |
+    - urgencia familiar
+    - imprevisto grave
+    - emergencia familiar
+
+- synonym: deber inexcusable
+  examples: |
+    - deber publico
+    - deber personal
+    - citación judicial
+    - renovación DNI
+    - juzgado
+    - jurado
+    - mesa electoral
+    - examenes
+    - examen
+
+- synonym: prenatales
+  examples: |
+    - exámenes prenatales
+    - preparación al parto
+    - médico embarazo
+    - revisión prenatal
+    - clases de preparación al parto
+
+- synonym: lactancia
+  examples: |
+    - lactancia
+    - cuidado del lactante
+    - amamantar
+
+
+# ------------------------------------------------------------------
+# 2. LOOKUP: Todas las palabras posibles (Oficiales + Sinónimos)
+# ------------------------------------------------------------------
+- lookup: tipo_permiso_retribuido
+  examples: |
+    - mudanza
+    - cambio de casa
+    - traslado de domicilio habitual
+    - nuevo piso
+    - traslado de vivienda
+    - traslado de domicilio
+    - matrimonio
+    - boda
+    - casamiento
+    - pareja de hecho
+    - registro civil
+    - enlace
+    - fallecimiento
+    - muerte
+    - defunción
+    - entierro
+    - sepelio
+    - pérdida de un familiar
+    - fuerza_mayor
+    - fuerza mayor
+    - urgencia familiar
+    - imprevisto grave
+    - emergencia familiar
+    - deber_publico
+    - deber publico
+    - deber inexcusable
+    - citación judicial
+    - renovación DNI
+    - juzgado
+    - jurado
+    - mesa electoral
+    - prenatales
+    - exámenes prenatales
+    - preparación al parto
+    - médico embarazo
+    - revisión prenatal
+    - examen
+    - examenes
+    - lactante
+    - lactancia
+    - cuidado del lactante
+    - amamantar
+    - enfermedad
+    - enfermo
+    - hospitalizacion
+    - ausencia

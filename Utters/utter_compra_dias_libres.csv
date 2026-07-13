@@ -1,0 +1,24 @@
+﻿utter_preguntar_primera_vez_compra_dias_libres;Para solicitar dias libres debes acceder a la pagina Be Flex ¿Es la primera vez que accedes a Be Flex?
+utter_no_primera_vez_compra_dias_libres;"Estos son los pasos a seguir:
+•	Desde cualquier navegador, dirígete a <a href=""https://beflex.micompensacion.com"" target=""_blank"">Be Flex</a>
+•	Introduce tu DNI y tu contraseña.
+•	Se presenta la pagina de Contratar Beneficios, pulsa en el menu lateral izquierdo la opción &ltProductos&gt
+•	En la siguiente página selecciona la tarjeta &ltCompra días libres&gt
+•	Te saldra que rellenes el número de días libres a comprar.
+•	Introduce los días a comprar y pulsa &ltSimular coste&gt
+•	Aparece la pantalla de Cesta con: los días comprados, su coste, un icono para editar la compra, un icono para vaciar la cesta y un icono para solicitarlos."
+utter_si_primera_vez_compra_dias_libres;"Estos son los pasos a seguir:
+•	Desde cualquier navegador, dirígete a <a href=""https://beflex.micompensacion.com"" target=""_blank"">Be Flex</a>
+•	Como es tu primera vez que accedes a Be Flex, haz clic en &ltAccedes por primera vez?&gt Deberás introducir tu NIF o NIE, correo corporativo y la contraseña que desees. Recibirás un correo para validar tu acceso.
+•	Aparece la página de politica de privacidad, marca el check de &ltHe leido&gt Selecciona &ltConfirmar&gt
+•	Aparece la página de bienvenida. Pulsa el botón &ltComenzar&gt
+•	Aparece la página de protección de datos, marca el check de &ltleido&gt Selecciona &ltSiguiente&gt
+•	Se presenta la página de Inicia la simulación y contratación. Pulsa &ltContratar beneficios&gt
+•	Aparece la pagina de Contratar Beneficios, en esta pagina selecciona la tarjeta de &ltCompra días libres&gt
+•	Aparece la página de contratación donde podrás:
+•	Pulsar el botón &ltInformación del producto&gt (para más información).
+•	Pulsar el botón &ltPreguntas más frecuentes&gt
+•	Te saldra que rellenes el número de días libres a comprar.
+•	Rellenar el número de días libres a comprar.
+•	Introduce los días a comprar y pulsa &ltSimular coste&gt
+•	Aparece la pantalla de Cesta con: los días comprados, su coste, un icono para editar la compra, un icono para vaciar la cesta y un icono para solicitarlos."

@@ -1,0 +1,21 @@
+version: "3.1"
+
+stories:
+
+- story: compra dias libres - primera vez
+  steps:
+  - intent: compra_dias_libres  # Usuario: "¿Como compro dias libres?"
+  - action: utter_preguntar_primera_vez_compra_dias_libres # Bot: ¿Es la primera vez que compra dias libres? 
+  - intent: si_primera_vez_compra_dias_libres # Usuario: "Si" 
+  - slot_was_set:
+    - tipo_primera_vez_compra_dias_libres: "si_primera_vez_compra_dias_libres"
+  - action: utter_si_primera_vez_compra_dias_libres
+
+- story: compra dias libres - ya registrado
+  steps:
+  - intent: compra_dias_libres  # Usuario: "¿Como compro dias libres?"
+  - action: utter_preguntar_primera_vez_compra_dias_libres # Bot: ¿Es la primera vez que compra dias libres? 
+  - intent: no_primera_vez_compra_dias_libres # Usuario "No" 
+  - slot_was_set:
+    - tipo_primera_vez_compra_dias_libres: "no_primera_vez_compra_dias_libres"
+  - action: utter_no_primera_vez_compra_dias_libres

@@ -1,0 +1,26 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/pingid
+    examples: |
+      - ¿Qué es PingID?
+      - ¿Qué es pingid?
+      - ¿Para qué sirve PingID?
+      - ¿Qué es la aplicación PingID?
+      - ¿Qué aplicación se usa para la autenticación?
+      - ¿Cómo funciona PingID en el ordenador?
+      - ¿Cómo se instala PingID en el portátil?
+      - ¿Cómo se instala PingID en el ordenador?
+      - ¿Cómo se instala PingID en el móvil?
+      - No tengo PingID instalado en mi equipo
+      - PingID no aparece instalado en mi PC
+      - ¿Qué hago si no tengo PingID?
+      - ¿Dónde solicito la instalación de PingID?
+      - ¿Dónde puedo descargar PingID?
+      - ¿Cómo descargo PingID en mi teléfono?
+      - ¿Puedo usar PingID en el móvil personal?
+      - ¿Cómo usar PingID en el teléfono personal?
+      - Necesito PingID en el móvil
+      - ¿Dónde abro un ticket para PingID?
+      - ¿A qué soporte contacto por problemas con PingID?
+      - Necesito ayuda con PingID

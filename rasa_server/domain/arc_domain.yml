@@ -1,0 +1,8 @@
+version: "3.1"
+
+intents:
+  - arc
+
+responses:
+  utter_faq/arc:
+    - text: "" # Se deja vacío, el NGL lo rellenará

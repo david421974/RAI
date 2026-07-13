@@ -1,0 +1,500 @@
+/* ─── Tipografía (añade en index.html el link de Google Fonts) ─────────────────
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   ─────────────────────────────────────────────────────────────────────────── */
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+/* ── Página completa ──────────────────────────────────────────────────────── */
+
+.auth-page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background-color: #04081a;
+  font-family: 'Sora', 'Segoe UI', system-ui, sans-serif;
+  overflow: hidden;
+}
+
+/* Fondo: grid sutil */
+.bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(59, 130, 246, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* Focos de luz */
+.bg-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  opacity: 0.35;
+}
+.bg-glow--left  { top: -10%; left:  -5%; background: radial-gradient(circle, #1d4ed8, transparent 70%); }
+.bg-glow--right { bottom: -10%; right: -5%; background: radial-gradient(circle, #4338ca, transparent 70%); }
+
+/* ── Tarjeta ──────────────────────────────────────────────────────────────── */
+
+.auth-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 460px;
+  background: rgba(10, 16, 36, 0.85);
+  border: 1px solid rgba(99, 179, 237, 0.14);
+  border-radius: 20px;
+  padding: 44px 40px 40px;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.03),
+    0 24px 60px rgba(0, 0, 0, 0.5),
+    0 0 80px rgba(59, 130, 246, 0.07);
+  backdrop-filter: blur(20px);
+  animation: cardIn 0.45s cubic-bezier(.22,.61,.36,1) both;
+}
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(28px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)   scale(1); }
+}
+
+/* ── Cabecera ────────────────────────────────────────────────────────────── */
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.auth-logo {
+  display: inline-flex;
+  margin-bottom: 20px;
+}
+
+.auth-logo svg {
+  width: 52px;
+  height: 52px;
+  filter: drop-shadow(0 0 18px rgba(99, 130, 246, 0.5));
+}
+
+.auth-title {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px;
+}
+
+.auth-subtitle {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── Indicador de pasos ──────────────────────────────────────────────────── */
+
+.steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 28px;
+}
+
+.step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.step-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+  border: 1.5px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #475569;
+  transition: all 0.3s ease;
+}
+
+.step-dot svg {
+  width: 12px;
+  height: 12px;
+}
+
+.step--active .step-dot {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: #3b82f6;
+  color: #93c5fd;
+  box-shadow: 0 0 16px rgba(59, 130, 246, 0.3);
+}
+
+.step--done .step-dot {
+  background: #1e3a5f;
+  border-color: #3b82f6;
+  color: #93c5fd;
+}
+
+.step-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #334155;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: color 0.3s;
+}
+
+.step--active .step-label,
+.step--done   .step-label {
+  color: #60a5fa;
+}
+
+.step-connector {
+  flex: 1;
+  height: 1.5px;
+  background: rgba(255,255,255,0.08);
+  margin: 0 10px 18px;
+  max-width: 60px;
+  transition: background 0.3s;
+}
+
+.step-connector--done {
+  background: linear-gradient(90deg, #3b82f6, #6366f1);
+}
+
+/* ── Alertas ─────────────────────────────────────────────────────────────── */
+
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  margin-bottom: 20px;
+  animation: alertIn 0.25s ease both;
+}
+
+@keyframes alertIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.alert svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.alert--error {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  color: #fca5a5;
+}
+
+.alert--success {
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  color: #86efac;
+}
+
+/* ── Cuerpo de formulario ────────────────────────────────────────────────── */
+
+.auth-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  animation: bodyIn 0.3s ease both;
+}
+
+@keyframes bodyIn {
+  from { opacity: 0; transform: translateX(10px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ── Campo de email ──────────────────────────────────────────────────────── */
+
+.field-group {
+  margin-bottom: 20px;
+}
+
+.field-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-bottom: 8px;
+}
+
+.field-wrapper {
+  position: relative;
+}
+
+.field-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 17px;
+  height: 17px;
+  color: #475569;
+  pointer-events: none;
+}
+
+.field-input {
+  width: 100%;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 13px 14px 13px 42px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #e2e8f0;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.field-input::placeholder { color: #334155; }
+
+.field-input:focus {
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+.field-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.field-hint {
+  display: block;
+  font-size: 0.78rem;
+  color: #475569;
+  margin-top: 7px;
+}
+
+/* ── Badge de email enviado ──────────────────────────────────────────────── */
+
+.email-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 8px;
+  padding: 8px 14px;
+  margin-bottom: 24px;
+  font-size: 0.84rem;
+  color: #93c5fd;
+  align-self: center;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.email-badge svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* ── Cajas OTP ───────────────────────────────────────────────────────────── */
+
+.otp-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.otp-box {
+  width: 52px;
+  height: 60px;
+  background: rgba(255,255,255,0.04);
+  border: 1.5px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'Sora', monospace;
+  color: #e2e8f0;
+  text-align: center;
+  outline: none;
+  caret-color: #3b82f6;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.otp-box:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.18), 0 0 18px rgba(59, 130, 246, 0.15);
+  background: rgba(59, 130, 246, 0.06);
+}
+
+.otp-box--filled {
+  border-color: rgba(99, 179, 237, 0.35);
+  background: rgba(59, 130, 246, 0.08);
+}
+
+.otp-box:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* ── Temporizador ────────────────────────────────────────────────────────── */
+
+.countdown {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #475569;
+  margin: 0 0 20px;
+}
+
+.countdown strong {
+  color: #93c5fd;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown--expired strong,
+.countdown--expired {
+  color: #f87171;
+}
+
+/* ── Botón principal ─────────────────────────────────────────────────────── */
+
+.btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+  letter-spacing: 0.01em;
+  margin-bottom: 16px;
+}
+
+.btn--primary {
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  color: white;
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+}
+
+.btn--primary:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 28px rgba(59, 130, 246, 0.42);
+}
+
+.btn--primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn:disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.btn-loading {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ── Spinner ─────────────────────────────────────────────────────────────── */
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Acciones secundarias ────────────────────────────────────────────────── */
+
+.secondary-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 0.83rem;
+  color: #60a5fa;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: color 0.2s, text-decoration-color 0.2s;
+}
+
+.btn-link:hover:not(:disabled) {
+  color: #93c5fd;
+  text-decoration-color: currentColor;
+}
+
+.btn-link:disabled {
+  color: #334155;
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+.separator {
+  color: #334155;
+  font-size: 0.85rem;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 36px 24px 32px;
+  }
+
+  .otp-box {
+    width: 44px;
+    height: 54px;
+    font-size: 1.3rem;
+  }
+
+  .otp-row {
+    gap: 7px;
+  }
+}

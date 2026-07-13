@@ -1,0 +1,21 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/neo
+    examples: |
+      - ¿Qué es Neo?
+      - ¿Qué es Neo en Capgemini?
+      - Explícame qué es la plataforma Neo
+      - ¿Para qué sirve Neo?
+      - ¿Qué hace Neo?
+      - ¿Qué es Neo y para qué se usa?
+      - ¿Qué tipo de ayuda ofrece Neo?
+      - ¿Neo ayuda con herramientas internas?
+      - ¿Neo sirve para resolver dudas corporativas?
+      - Cuéntame qué es Neo
+      - Necesito saber qué es Neo
+      - ¿En qué me puede ayudar Neo?
+      - ¿Neo es un asistente digital?
+      - ¿Qué puedo consultar en Neo?
+      - ¿Cuál es la ayuda de Capgemini?
+      

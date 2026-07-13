@@ -1,0 +1,135 @@
+services:
+  # --- SERVICIO RASA ---
+  rasa_server:
+    build: ./rasa_server
+    container_name: rasa_server
+    volumes:
+      - ./rasa_server:/app
+    ports:
+      - "5005:5005"
+    entrypoint:
+      - /bin/bash
+      - -c
+      - "python /app/scripts/build_domain.py
+          --domain-dir /app/domain
+          --base basics_domain.yml
+          --out /app/domain.yml &&
+         rasa run --enable-api --cors '*' --debug -i 0.0.0.0 --port 5005"
+
+  # --- SERVIDOR DE ACCIONES ---
+  action_server:
+    build:
+      context: ./action_server
+    container_name: action_server
+    volumes:
+      - ./action_server/actions:/app/action_server
+    ports:
+      - "5055:5055"
+    depends_on:
+      - rasa_server
+
+  # --- INTERFAZ WEB ---
+  web_client:
+    build:
+      context: ./chatbot-ui
+      dockerfile: Dockerfile
+    container_name: rasa_angular_ui
+    ports:
+      - "8080:80"
+    depends_on:
+      - rasa_server
+      - auth_api           # ← espera a que la API de auth esté lista
+
+  # --- DB PARA ESTADÍSTICAS + USUARIOS ---
+  stats_db:
+    image: postgres:16-alpine
+    container_name: stats_db
+    environment:
+      - POSTGRES_DB=stats
+      - POSTGRES_USER=stats
+      - POSTGRES_PASSWORD=stats
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./stats_db_data:/var/lib/postgresql/data
+      - ./stats_api/init.sql:/docker-entrypoint-initdb.d/001_init.sql:ro
+      - ./auth_api/init_users.sql:/docker-entrypoint-initdb.d/002_users.sql:ro   # ← NUEVO
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U stats -d stats"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  # --- API PARA TOP INTENTS ---
+  stats_api:
+    build: ./stats_api
+    container_name: stats_api
+    environment:
+      - DATABASE_URL=postgresql+psycopg://stats:stats@stats_db:5432/stats
+      - RASA_URL=http://rasa_server:5005
+      - ALLOW_ORIGINS=*
+      - NLU_DIR=/data/nlu
+    ports:
+      - "7000:7000"
+    volumes:
+      - ./rasa_server/data/nlu:/data/nlu:ro
+    depends_on:
+      stats_db:
+        condition: service_healthy
+      rasa_server:
+        condition: service_started
+
+  # --- API DE AUTENTICACIÓN (NUEVO) ---
+  auth_api:
+    build: ./auth_api
+    container_name: auth_api
+    environment:
+      - DATABASE_URL=postgresql://stats:stats@stats_db:5432/stats
+      - JWT_SECRET=272cbdae818c499778ac8d6f06e3fd8597a5bde42c7c0a3bff79f5423612caae
+      - ALLOWED_DOMAIN=capgemini.com
+      - ALLOW_ORIGINS=*
+      - TOKEN_EXPIRE_HOURS=8
+      - ADMIN_KEY=924dc5a8dbf9c4862122bb3f414b8cdff72540f40a83f1817c4bb0aaf4884ec5
+    ports:
+      - "7001:7001"
+    depends_on:
+      stats_db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:7001/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # --- NGL SERVER ---
+  nlg_server:
+    build: ./nlg_server
+    container_name: nlg_server
+    volumes:
+      - "./Utters:/data/utters:ro"
+    environment:
+      - EXCEL_NAME=${EXCEL_NAME}
+    ports:
+      - "5006:5006"
+    restart: always
+
+  # --- RASA SERVER FOR CLIENT ---
+  rasa_cli:
+    profiles:
+      - manual
+    build:
+      context: ./rasa_server
+      dockerfile: Dockerfile
+    container_name: rasa_cli
+    working_dir: /app
+    user: "root"
+    volumes:
+      - ./rasa_server:/app
+      - ./rasa_server/models:/app/models
+    environment:
+      - RASA_TELEMETRY_ENABLED=false
+    entrypoint: ["rasa"]
+    command: ["--help"]
+
+volumes:
+  stats_db_data:

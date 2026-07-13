@@ -1,0 +1,8 @@
+version: "3.1"
+
+intents:
+  - formacion_continua
+
+responses:
+  utter_faq/formacion_continua:
+    - text: "" # Se deja vacío, el NLG lo rellenará

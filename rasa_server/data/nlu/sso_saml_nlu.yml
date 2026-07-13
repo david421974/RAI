@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/sso_saml
+    examples: |
+      - ¿Qué es SSO?
+      - ¿Qué significa Single Sign-On?
+      - ¿Para qué sirve el SSO?
+      - ¿En qué consiste el acceso SSO?
+      - ¿Qué es SSO SAML?
+      - ¿Qué significa SAML?
+      - ¿Qué es SAML en autenticación?
+      - ¿Cómo funciona SSO con SAML?
+      - ¿Para qué sirve SAML?
+      - Diferencia entre SSO y SSO SAML

@@ -1,0 +1,218 @@
+/* Fuente: añade en index.html
+   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+*/
+
+:host { display: block; height: 100%; }
+
+/* ── Página ──────────────────────────────────────────────────────────────── */
+
+.auth-page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background-color: #04081a;
+  font-family: 'Sora', 'Segoe UI', system-ui, sans-serif;
+  overflow: hidden;
+}
+
+.bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(59,130,246,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,130,246,.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.bg-glow {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  filter: blur(130px);
+  pointer-events: none;
+  opacity: .3;
+}
+.glow--l { top: -10%;    left:  -8%;  background: radial-gradient(circle, #1d4ed8, transparent 70%); }
+.glow--r { bottom: -10%; right: -8%;  background: radial-gradient(circle, #4338ca, transparent 70%); }
+
+/* ── Tarjeta ─────────────────────────────────────────────────────────────── */
+
+.auth-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 440px;
+  background: rgba(9, 25, 53, 1);
+  border: 1px solid rgba(99, 179, 237, .13);
+  border-radius: 20px;
+  padding: 48px 40px 44px;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.03),
+    0 24px 60px rgba(0,0,0,.5),
+    0 0 80px rgba(59,130,246,.06);
+  backdrop-filter: blur(20px);
+  animation: cardIn .4s cubic-bezier(.22,.61,.36,1) both;
+}
+
+@keyframes cardIn {
+  from { opacity:0; transform:translateY(24px) scale(.97); }
+  to   { opacity:1; transform:translateY(0)    scale(1);   }
+}
+
+/* ── Cabecera ────────────────────────────────────────────────────────────── */
+
+.auth-header { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  margin-bottom: 32px; 
+}
+
+.auth-logo { display: inline-flex; margin-bottom: 20px; }
+.auth-logo svg {
+  width: 52px; height: 52px;
+  filter: drop-shadow(0 0 18px rgba(99,130,246,.5));
+}
+
+.auth-title {
+  font-size: 1.55rem; font-weight: 700;
+  color: #e2e8f0; letter-spacing: -.02em;
+  margin: 0 0 8px;
+}
+
+.auth-sub {
+  font-size: .875rem; color: #64748b;
+  margin: 0; line-height: 1.5;
+}
+
+/* ── Alert ───────────────────────────────────────────────────────────────── */
+
+.alert {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 12px 16px; border-radius: 10px;
+  font-size: .84rem; line-height: 1.45; margin-bottom: 20px;
+  background: rgba(239,68,68,.12);
+  border: 1px solid rgba(239,68,68,.25);
+  color: #fca5a5;
+  animation: alertIn .22s ease both;
+}
+.alert svg { width:16px; height:16px; flex-shrink:0; margin-top:1px; }
+
+@keyframes alertIn {
+  from { opacity:0; transform:translateY(-5px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+/* ── Formulario ──────────────────────────────────────────────────────────── */
+
+.auth-form { display: flex; flex-direction: column; gap: 20px; }
+
+/* ── Campo ───────────────────────────────────────────────────────────────── */
+
+.field { display: flex; flex-direction: column; gap: 7px; }
+
+.field-label {
+  font-size: .78rem; font-weight: 600;
+  color: #94a3b8; letter-spacing: .07em;
+}
+
+.field-wrap { position: relative; }
+
+.field-icon {
+  position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+  width: 17px; height: 17px; color: #475569; pointer-events: none;
+}
+
+.field-input {
+  width: 100%; box-sizing: border-box;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 10px;
+  padding: 13px 14px 13px 42px;
+  font-size: .95rem; font-family: inherit;
+  color: #e2e8f0; outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.field-input::placeholder { color: #334155; }
+
+.field-input:focus {
+  border-color: rgba(59,130,246,.5);
+  box-shadow: 0 0 0 3px rgba(59,130,246,.13);
+}
+
+.field-input:disabled { opacity: .45; cursor: not-allowed; }
+
+/* Contraseña: padding extra a la derecha para el botón de ojo */
+.field-input--pwd { padding-right: 46px; }
+
+.field-hint { font-size: .77rem; color: #475569; }
+.field-hint strong { color: #60a5fa; }
+
+/* ── Toggle mostrar contraseña ───────────────────────────────────────────── */
+
+.pwd-toggle {
+  position: absolute; right: 13px; top: 50%; transform: translateY(-50%);
+  background: none; border: none; cursor: pointer; padding: 2px;
+  color: #475569; display: flex; align-items: center;
+  transition: color .2s;
+}
+.pwd-toggle:hover { color: #93c5fd; }
+.pwd-toggle svg   { width: 18px; height: 18px; }
+
+/* ── Botón login ─────────────────────────────────────────────────────────── */
+
+.btn-login {
+  margin-top: 4px;
+  width: 100%; padding: 14px;
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  border: none; border-radius: 12px;
+  font-size: .96rem; font-family: inherit; font-weight: 600;
+  color: white; cursor: pointer; letter-spacing: .01em;
+  box-shadow: 0 4px 20px rgba(59,130,246,.3);
+  transition: opacity .2s, transform .15s, box-shadow .2s;
+}
+
+.btn-login:hover:not(:disabled) {
+  opacity: .9; transform: translateY(-1px);
+  box-shadow: 0 6px 28px rgba(59,130,246,.42);
+}
+.btn-login:active:not(:disabled) { transform: translateY(0); }
+
+.btn-login:disabled {
+  opacity: .35; cursor: not-allowed;
+  transform: none !important; box-shadow: none !important;
+}
+
+/* ── Spinner ─────────────────────────────────────────────────────────────── */
+
+.btn-loading {
+  display: inline-flex; align-items: center; gap: 10px;
+}
+
+.spinner {
+  display: inline-block; width: 16px; height: 16px;
+  border: 2px solid rgba(255,255,255,.3);
+  border-top-color: white; border-radius: 50%;
+  animation: spin .7s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+
+@media (max-width: 480px) {
+  .auth-card { padding: 36px 22px 32px; }
+}
+
+/* ── Logo ──────────────────────────────────────────────────────────── */
+.auth-gif {
+  width: 300px;
+  height: auto;
+  margin-bottom: 8px;
+}

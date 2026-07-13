@@ -1,0 +1,22 @@
+version: "3.1"
+
+intents:
+  - fill_timesheet
+
+actions:
+  - action_manage
+
+entities:
+  - timesheet_type
+
+slots:
+  timesheet_type:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: timesheet_type
+
+responses:
+  # Timesheet
+  utter_faq/fill_timesheet:
+  - text: ""

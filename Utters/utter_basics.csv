@@ -1,0 +1,7 @@
+﻿utter_greet;¡Hola! ¿En qué puedo ayudarte?
+utter_goodbye;¡Hasta luego! espero haberte ayudado
+utter_you_are_welcome;¡De nada! Aquí estaré si tienes más dudas.
+utter_please_rephrase;Lo siento, no te he entendido bien. ¿Podrías repetirlo con otras palabras?
+utter_ask_doubt;¿Tienes alguna duda sobre como gestionar algo en Capgemini?
+utter_out_of_scope;Lo siento, solo soy un experto en resolver dudas sobre como realizar tareas de gestión en Capgemini. No puedo ayudarte con eso me dices.
+utter_default;Disculpa, no entendí la pregunta. ¿Podrías reformularla?

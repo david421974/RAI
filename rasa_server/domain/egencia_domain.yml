@@ -1,0 +1,8 @@
+version: "3.1"
+
+intents:
+  - egencia
+
+responses:
+  utter_faq/egencia:
+    - text: "" # Se deja vacío, el NGL lo rellenará

@@ -1,0 +1,21 @@
+version: "3.1"
+
+intents:
+  - rlpt
+
+actions:
+  - action_manage
+
+entities:
+  - rlpt_type
+
+slots:
+  rlpt_type:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: rlpt_type
+
+responses:
+  utter_faq/rlpt:
+    - text: "" # Se deja vacío, el NLG lo rellenará

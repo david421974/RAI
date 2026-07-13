@@ -1,0 +1,7 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/alta_beflex
+    examples: |
+      - ¿Cómo accedo a Be Flex?
+      - ¿Cuál es el proceso de alta en la plataforma BeFlex?

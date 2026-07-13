@@ -1,0 +1,31 @@
+<section class="faq-section">
+  <h3 class="faq-title">Preguntas Frecuentes</h3>
+
+  @if (loading) {
+    <div class="faq-loading">Cargando sugerencias…</div>
+  }
+
+  <div class="faq-chips">
+    @for (faq of visibleFaqs; track faq.payload) {
+      <button class="faq-chip" (click)="onFaqClick(faq)">
+        {{ faq.label }}
+      </button>
+    }
+  </div>
+
+  @if (hasMore) {
+    <div class="see-more-wrapper">
+      <button class="see-more-btn" (click)="toggleExpanded()">
+        Ver más
+      </button>
+    </div>
+  }
+
+  @if (expanded && faqs.length > visibleCount) {
+    <div class="see-more-wrapper">
+      <button class="see-more-btn" (click)="toggleExpanded()">
+        Ver menos
+      </button>
+    </div>
+  }
+</section>

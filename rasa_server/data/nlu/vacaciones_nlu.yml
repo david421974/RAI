@@ -1,0 +1,9 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/vacaciones
+    examples: |
+      - ¿Cómo solicito vacaciones?
+      - ¿Cómo pido días de asuntos propios?
+      - ¿Dónde solicito mis vacaciones?
+      

@@ -1,0 +1,298 @@
+:host {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* ====== SHELL (sidebar + main) ====== */
+.shell {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* ====== SIDEBAR (Fondo Pastel) ====== */
+.sidebar {
+  width: 200px;
+  min-width: 200px;
+  height: 100vh;
+  background: #f4f8fd; /* El color pastel que solicitaste */
+  border-right: 1px solid #e6f0fa; /* Un borde sutil para separar del main */
+  display: flex;
+  flex-direction: column;
+  transition: width 0.25s ease, min-width 0.25s ease;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.sidebar-collapsed .sidebar {
+  width: 56px;
+  min-width: 56px;
+}
+
+.sidebar-collapsed .sidebar-nav {
+  display: none;
+}
+
+/* Hamburger top */
+.sidebar-top {
+  padding: 20px 14px 12px;
+}
+
+.hamburger-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #0256AE; /* Icono en color corporativo */
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.hamburger-btn:hover {
+  background: #e6f0fa;
+}
+
+/* Nav links */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px 8px;
+  flex: 1;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 10px;
+  color: #333; /* Texto oscuro para buena lectura */
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.nav-link:hover {
+  background: #e6f0fa;
+  color: #0256AE;
+}
+
+.nav-link.active {
+  background: #e6f0fa;
+  color: #0256AE;
+  border-left: 4px solid #0256AE; /* Indicador visual de activo */
+}
+
+.nav-link svg {
+  flex-shrink: 0;
+}
+
+/* Mis Chats */
+.mis-chats-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.mis-chats-block button {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent;
+}
+
+button.nav-link.mis-chats-toggle {
+  width: 100%;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.mis-chats-toggle-open .mis-chats-chevron::before {
+  transform: rotate(-135deg);
+  margin-bottom: -2px;
+}
+
+.mis-chats-chevron {
+  margin-inline-start: auto;
+  width: 6px;
+  height: 6px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.mis-chats-chevron::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 5px;
+  height: 5px;
+  border-right: 2px solid #0256AE; 
+  border-bottom: 2px solid #0256AE;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+.mis-chats-panel {
+  padding: 4px 0 8px 6px;
+  border-left: 2px solid #cce0f5;
+  margin: 4px 0 4px 12px;
+}
+
+.mis-chats-empty {
+  margin: 0;
+  padding: 6px 8px;
+  font-size: 0.72rem;
+  color: #666;
+  line-height: 1.35;
+}
+
+.chat-history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: min(280px, 42vh);
+  overflow-y: auto;
+}
+
+.chat-history-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.chat-history-list::-webkit-scrollbar-thumb {
+  background: #cce0f5;
+  border-radius: 4px;
+}
+
+.chat-history-li {
+  margin: 0;
+}
+
+.chat-history-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 8px 8px;
+  margin: 1px 0;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  font-size: 0.74rem;
+  font-weight: 500;
+  color: #444;
+  cursor: pointer;
+  font-family: inherit;
+  line-height: 1.25;
+  word-break: break-word;
+  transition: all 0.2s;
+}
+
+.chat-history-item:hover {
+  background: #e6f0fa;
+  color: #0256AE;
+}
+
+.chat-history-item-active {
+  background: #e6f0fa !important;
+  color: #0256AE !important;
+  font-weight: 600;
+}
+
+.rai-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #0256AE;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.sidebar-bottom {
+  margin-top: auto; /* Empuja el logo hacia la parte inferior del sidebar automáticamente */
+  margin-bottom: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Lo centra perfectamente en el ancho del sidebar */
+}
+
+.capgemini-logo svg {
+  flex-shrink: 0;
+  width: 90px;
+  height: 90px;
+  background: #f4f8fd; /* El color pastel que solicitaste */
+  mix-blend-mode: multiply; /* Esto hace que el fondo blanco de la imagen desaparezca y se fusione con el color del sidebar */
+}
+
+/* ====== MAIN CONTENT ====== */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  background: #ffffff; /* Blanco para contrastar limpiamente con el sidebar pastel */
+}
+
+.main-header {
+  padding: 20px 32px 16px;
+  flex-shrink: 0;
+}
+
+.main-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0256AE;
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 32px 24px;
+}
+
+.main-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background: #cce0f5; 
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.1);
+  }
+  .sidebar-collapsed .sidebar {
+    width: 0;
+    min-width: 0;
+  }
+  .main-content {
+    padding: 0 16px 16px;
+  }
+  .main-header {
+    padding: 16px;
+  }
+}

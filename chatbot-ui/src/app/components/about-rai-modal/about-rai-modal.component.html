@@ -1,0 +1,55 @@
+@if (visible) {
+  <div class="modal-backdrop" (click)="onClose()"></div>
+  <div class="modal-panel">
+    <div class="modal-header">
+      <h2 class="modal-title">Conoce a RAI</h2>
+      <button class="close-btn" (click)="onClose()" aria-label="Cerrar">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <div class="rai-hero">
+        <div class="rai-avatar">R</div>
+        <p class="rai-tagline">Tu asistente virtual de Capgemini</p>
+      </div>
+
+      <div class="rai-section">
+        <h3>¿Qué es RAI?</h3>
+        <p>
+          RAI es el asistente virtual inteligente de Capgemini, diseñado para ayudarte con tus
+          consultas del día a día dentro de la empresa. Desde gestionar tu nómina hasta resolver
+          dudas sobre beneficios, RAI está aquí para hacerte la vida más fácil.
+        </p>
+      </div>
+
+      <div class="rai-section">
+        <h3>¿Qué puedo hacer con RAI?</h3>
+        <ul class="feature-list">
+          <li>Consultar tus nóminas y documentos</li>
+          <li>Reportar horas en tu hoja de tiempo</li>
+          <li>Solicitar días libres o permisos retribuidos</li>
+          <li>Información sobre FlexAbroad y BeFlex</li>
+          <li>Buscar en el directorio corporativo</li>
+          <li>Consultar ofertas de empleo interno</li>
+          <li>Obtener un referral</li>
+          <li>Solicitar pase de oficina</li>
+          <li>Conocer el canal SpeakUp</li>
+          <li>Consultar disponibilidad en Whoz</li>
+        </ul>
+      </div>
+
+      <div class="rai-section">
+        <h3>¿Cómo funciona?</h3>
+        <p>
+          Simplemente escribe tu pregunta en el chat y RAI te guiará paso a paso.
+          Puedes usar lenguaje natural — no necesitas comandos especiales. Si no entiendo
+          algo, te sugeriré opciones para que encuentres lo que necesitas.
+        </p>
+      </div>
+    </div>
+  </div>
+}

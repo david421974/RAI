@@ -1,0 +1,27 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/certificado_retenciones
+    examples: |
+      - ¿Qué es el certificado de retenciones?
+      - ¿Para qué sirve el certificado de retenciones?
+      - ¿Qué información incluye el certificado de retenciones?
+      - Necesito el certificado de retenciones para la renta
+      - ¿Por qué es importante el certificado de retenciones para Hacienda?
+      - ¿Dónde puedo descargarme el certificado de retenciones fiscales?
+      - Quiero verificar mis retenciones del IRPF
+      - ¿Dónde puedo encontrar mi certificado de retenciones?
+      - ¿Cómo descargo el certificado de retenciones?
+      - ¿Dónde está el certificado de retenciones?
+      - No encuentro mi certificado de retenciones
+      - ¿Me dices la ruta para encontrar el certificado de retenciones?
+      - Necesito el papel de las retenciones
+      - El documento de las retenciones del año
+      - El certificado de lo que me han retenido
+      - El justificante de IRPF
+      - El papel para Hacienda con las retenciones
+      - El documento de impuestos que emite la empresa
+      - Me falta el certificado de retenciones
+      - No sé dónde mirar las retenciones del IRPF
+      - Necesito comprobar los impuestos que ya he pagado
+      - Quiero acreditar las retenciones ante Hacienda

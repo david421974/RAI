@@ -1,0 +1,8 @@
+version: "3.1"
+
+intents:
+  - neo
+
+responses:
+  utter_faq/neo:
+    - text: "" # Se deja vacío, el NLG lo rellenará

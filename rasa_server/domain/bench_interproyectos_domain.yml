@@ -1,0 +1,8 @@
+version: "3.1"
+
+intents:
+  - bench_interproyectos
+
+responses:
+  utter_faq/bench_interproyectos:
+    - text: "" # Se deja vacío, el NLG lo rellenará

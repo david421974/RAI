@@ -1,0 +1,128 @@
+<div class="auth-page">
+
+  <div class="bg-grid"          aria-hidden="true"></div>
+  <div class="bg-glow glow--l"  aria-hidden="true"></div>
+  <div class="bg-glow glow--r"  aria-hidden="true"></div>
+
+  <div class="auth-card">
+
+    <!-- Cabecera ─────────────────────────────────────────────────────────── -->
+    <div class="auth-header">
+      <img src="assets/logo.gif" alt="Logo" class="auth-gif" />
+      <div class="auth-logo" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" rx="14" fill="url(#g)"/>
+          <path d="M24 13a7 7 0 0 0-7 7v2h-1a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16
+                   a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1v-2a7 7 0 0 0-7-7zm0 2.5
+                   a4.5 4.5 0 0 1 4.5 4.5v2h-9v-2A4.5 4.5 0 0 1 24 15.5zm0 9.5
+                   a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z" fill="white"/>
+          <defs>
+            <linearGradient id="g" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#2563eb"/>
+              <stop offset="1" stop-color="#6366f1"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <p  class="auth-sub">Introduce tus credenciales para entrar al chatbot</p>
+    </div>
+
+    <!-- Error ────────────────────────────────────────────────────────────── -->
+    <div *ngIf="errorMsg" class="alert" role="alert">
+      <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M8 5v3M8 10.5v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      {{ errorMsg }}
+    </div>
+
+    <!-- Formulario ───────────────────────────────────────────────────────── -->
+    <div class="auth-form">
+
+      <!-- Email -->
+      <div class="field">
+        <label class="field-label" for="email">Usuario</label>
+        <div class="field-wrap">
+          <svg class="field-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M3 5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5
+                     a2 2 0 0 1-2-2V5zm0 0 7 5 7-5"
+                  stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <input
+            id="email"
+            type="email"
+            class="field-input"
+            [(ngModel)]="email"
+            placeholder="nombre@capgemini.com"
+            autocomplete="email"
+            (keydown.enter)="onLogin()"
+            [disabled]="loading"
+          />
+        </div>
+        <span class="field-hint">Solo se aceptan correos de <strong>@capgemini.com</strong></span>
+      </div>
+
+      <!-- Contraseña -->
+      <div class="field">
+        <label class="field-label" for="password">Password</label>
+        <div class="field-wrap">
+          <svg class="field-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <rect x="4" y="9" width="12" height="9" rx="2"
+                  stroke="currentColor" stroke-width="1.5"/>
+            <path d="M7 9V7a3 3 0 0 1 6 0v2"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <input
+            id="password"
+            [type]="showPwd ? 'text' : 'password'"
+            class="field-input field-input--pwd"
+            [(ngModel)]="password"
+            placeholder="••••••••"
+            autocomplete="current-password"
+            (keydown.enter)="onLogin()"
+            [disabled]="loading"
+          />
+          <button
+            type="button"
+            class="pwd-toggle"
+            (click)="togglePwd()"
+            [attr.aria-label]="showPwd ? 'Ocultar contraseña' : 'Mostrar contraseña'"
+          >
+            <!-- Ojo abierto -->
+            <svg *ngIf="!showPwd" viewBox="0 0 20 20" fill="none">
+              <path d="M2 10s3-6 8-6 8 6 8 6-3 6-8 6-8-6-8-6z"
+                    stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="10" cy="10" r="2.5"
+                      stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+            <!-- Ojo cerrado -->
+            <svg *ngIf="showPwd" viewBox="0 0 20 20" fill="none">
+              <path d="M3 3l14 14M8.5 8.58A3 3 0 0 0 10 13a3 3 0 0 0 2.94-2.4
+                       M6.3 6.3C4.3 7.4 2.8 9.3 2 10c1.7 3 4.5 6 8 6
+                       a8.2 8.2 0 0 0 3.7-.9M10 4c3.5 0 6.3 3 8 6
+                       a13.7 13.7 0 0 1-1.6 2.4"
+                    stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Botón -->
+      <button
+        class="btn-login"
+        (click)="onLogin()"
+        [disabled]="loading || !email || !password"
+      >
+        <span *ngIf="!loading">Entrar al chatbot</span>
+        <span *ngIf="loading" class="btn-loading">
+          <span class="spinner"></span> Verificando&hellip;
+        </span>
+      </button>
+
+    </div><!-- /auth-form -->
+
+  </div><!-- /auth-card -->
+</div><!-- /auth-page -->

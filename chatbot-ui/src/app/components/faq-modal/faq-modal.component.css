@@ -1,0 +1,124 @@
+/* Backdrop */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 86, 174, 0.15); /* Color corporativo con mucha más transparencia */
+  backdrop-filter: blur(3px); /* Mantiene el efecto difuminado sobre el fondo claro */
+  z-index: 1000;
+}
+
+/* Panel */
+.modal-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 12px 48px rgba(2, 86, 174, 0.2);
+  width: min(520px, 92vw);
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header */
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 28px 16px;
+  border-bottom: 1px solid #e6f0fa;
+  flex-shrink: 0;
+  background: #0256AE; /* Header corporativo en el modal */
+}
+
+.modal-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #cce0f5;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.close-btn:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.15);
+}
+
+/* Search bar */
+.search-bar {
+  position: relative;
+  padding: 16px 28px;
+  flex-shrink: 0;
+  background: #f4f8fd;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 40px 12px 16px;
+  border: 2px solid #cce0f5;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s;
+}
+
+.search-input:focus {
+  border-color: #0256AE;
+  box-shadow: 0 0 0 3px rgba(2, 86, 174, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  right: 42px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #0256AE;
+}
+
+/* FAQ list */
+.faq-list {
+  overflow-y: auto;
+  padding: 12px 20px 20px;
+  flex: 1;
+}
+
+.faq-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 14px 18px;
+  margin-bottom: 8px;
+  border: 1px solid #e6f0fa;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.faq-item:hover {
+  background: #f4f8fd;
+  border-color: #0256AE;
+  color: #0256AE;
+  transform: translateX(4px);
+}

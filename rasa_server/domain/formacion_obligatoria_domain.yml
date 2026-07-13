@@ -1,0 +1,20 @@
+version: "3.1"
+
+intents:
+  - formacion_obligatoria
+  - historial_de_aprendizaje
+  - que_es_la_formacion_obligatoria
+
+entities:
+  - formacion_obligatoria_type
+
+responses:
+  utter_faq/formacion_obligatoria:
+    - text: "" # Se deja vacío, el NGL lo rellenará
+  utter_faq/historial_de_aprendizaje:
+    - text: "" # Se deja vacío, el NGL lo rellenará
+  utter_faq/que_es_la_formacion_obligatoria:
+    - text: "" # Se deja vacío, el NGL lo rellenará
+
+
+

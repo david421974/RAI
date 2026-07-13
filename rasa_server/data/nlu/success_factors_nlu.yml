@@ -1,0 +1,30 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/success_factors
+    examples: |
+      - ¿Qué es Success Factors?
+      - ¿Para qué sirve Success Factors?
+      - ¿Qué puedo hacer en Success Factors?
+      - ¿Qué es la plataforma Success Factors de Capgemini?
+      - ¿Dónde consulto mi información como empleado?
+      - Plataforma corporativa de empleados
+      - Portal corporativo de Capgemini
+      - Acceso a información del empleado
+      - Web interna de empleados
+      - Portal del empleado
+      - Sitio donde consultar mis datos de empleado
+      - Quiero ver mi archivo de empleado
+      - ¿Dónde consulto mi id de empleado?
+      - Necesito ver mis datos personales
+      - ¿Dónde están mis datos bancarios?
+      - Consultar la nómina
+      - Ver payroll
+      - Ver mi categoría profesional
+      - Ver mi GBU
+      - Actualizar información personal
+      - Cambiar mis datos en la empresa
+      - Modificar datos personales
+      - Acceder a mi información de empleado
+      - Ver mi revisión anual
+      - Consultar mis datos laborales

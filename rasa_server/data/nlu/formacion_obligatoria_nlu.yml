@@ -1,0 +1,51 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/formacion_obligatoria
+    examples: |
+      - ¿Cómo accedo a la formación obligatoria?
+      - ¿Dónde está la formación obligatoria?
+      - ¿Dónde encuentro los cursos obligatorios de Capgemini?
+      - ¿Qué plataforma se utiliza para la formación obligatoria?
+      - ¿Dónde tengo que meterme para hacer la formación obligatoria?
+      - ¿Cómo hago para entrar a los cursos obligatorios?
+      - ¿Dónde se supone que está la formación esa obligatoria?
+      - ¿Por dónde accedo a la formación que hay que hacer sí o sí?
+      - ¿En qué sitio puedo ver la formación obligatoria que me toca?
+
+  - intent: faq/historial_de_aprendizaje
+    examples: |
+      - ¿Cómo puedo ver mi historial de aprendizaje?
+      - ¿Dónde encuentro el registro de los cursos que he hecho?
+      - ¿Cómo accedo a mi historial de formación?
+      - ¿Puedo consultar los cursos que ya he completado?
+      - ¿Dónde puedo revisar mi progreso en la formación?
+      - ¿Cómo veo qué cursos ya he terminado?
+      - ¿Dónde está el historial de los cursos que he hecho?
+      - ¿Cómo puedo saber qué formación ya he completado?
+      - ¿Cómo puedo ver qué formación obligatoria tengo pendiente?      
+
+  - intent: faq/que_es_la_formacion_obligatoria
+    examples: |
+      - ¿Qué es la formación obligatoria?
+      - ¿Para qué sirve la formación obligatoria?
+      - ¿Por qué tengo que hacer la formación obligatoria?
+      - ¿En qué consiste la formación obligatoria de Capgemini?
+      - ¿Qué temas se tratan en la formación obligatoria?
+      - ¿Cuál es el objetivo de la formación obligatoria?
+      - ¿Qué beneficios tiene hacer la formación obligatoria?
+      - ¿Qué tipo de contenido incluye la formación obligatoria?
+      - ¿Por qué es importante completar la formación obligatoria?
+
+  - lookup: formacion_obligatoria_type
+    examples: |
+      - Formación obligatoria
+      - Cursos obligatorios
+      - Formación que hay que hacer sí o sí
+      - Formación que es imprescindible
+      - Formación que es necesaria
+      - Formación que es mandatoria
+      - Formación que es esencial
+      - Formación que es requerida
+
+

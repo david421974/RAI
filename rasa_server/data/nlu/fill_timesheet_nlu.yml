@@ -1,0 +1,35 @@
+version: "3.1"
+
+nlu:
+- intent: faq/fill_timesheet
+  examples: |
+    - ¿Donde puedo encontrar el [timesheet](timesheet_type)?
+    - ¿Donde puedo encontrar el [replicon](timesheet_type)?
+    - ¿Donde puedo encontrar el [parte de horas](timesheet_type)?
+    - ¿Como hago el [timesheet](timesheet_type)?
+    - ¿Como hago el [replicon](timesheet_type)?
+    - ¿Como hago el [parte de horas](timesheet_type)?
+    - Tengo que rellenar el [timesheet](timesheet_type)
+    - Tengo que rellenar el [replicon](timesheet_type)
+    - Tengo que rellenar el [parte de horas](timesheet_type)
+    - ¿Como se hace el [timesheet](timesheet_type)?
+    - ¿Como se hace el [replicon](timesheet_type)?
+    - ¿Como se hace el [parte de horas](timesheet_type)?
+    - Quiero hacer el [timesheet](timesheet_type)?
+    - Quiero hacer el [replicon](timesheet_type)?
+    - Quiero hacer el [parte de horas](timesheet_type)?
+    - Para hacer el [timesheet](timesheet_type) que hago?
+    - Para hacer el [replicon](timesheet_type) que hago?
+    - Para hacer el [parte de horas](timesheet_type) que hago?
+    - En Capgemini como se hace el [timesheet](timesheet_type)?
+    - En Capgemini como se hace el [replicon](timesheet_type)?
+    - En Capgemini como se hace el [parte de horas](timesheet_type)?
+    - Donde se hace el [timesheet](timesheet_type)?
+    - Donde se hace el [replicon](timesheet_type)?
+    - Donde se hace el [parte de horas](timesheet_type)?
+
+- lookup: timesheet_type
+  examples: |
+    - timesheet
+    - replicon
+    - parte de horas

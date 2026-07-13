@@ -1,0 +1,8 @@
+version: "3.1"
+
+intents:
+  - ayuda_en_bench
+
+responses:
+  utter_faq/ayuda_en_bench:
+    - text: "" # Se deja vacío, el NLG lo rellenará

@@ -1,0 +1,35 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/cres
+    examples: |
+      - Tengo una incidencia en la oficina, ¿con quién debo contactar?
+      - Necesito reportar un problema en el edificio
+      - Hay algo roto en la oficina
+      - Tengo un problema con una taquilla
+      - La taquilla está bloqueada
+      - No puedo abrir mi taquilla
+      - Una pantalla no funciona
+      - La pantalla de una sala está rota
+      - El monitor no enciende
+      - Hay un desperfecto en el mobiliario
+      - Una silla está rota
+      - Una mesa está dañada
+      - La puerta esta estropeada
+      - ¿Quién se encarga del mantenimiento del edificio?
+      - ¿Quién se ocupa de los edificios en Capgemini?
+      - ¿Qué departamento lleva los temas inmobiliarios?
+      - ¿Quién gestiona las infraestructuras?
+      - ¿Quién arregla los problemas del edificio?
+      - No se puede abrir una ventana
+      - Una ventana está bloqueada
+      - Hay un problema en una sala de reuniones
+      - La sala tiene un desperfecto
+      - Algo falla en una sala
+      - Contacto con CRES
+      - ¿Cómo puedo contactar con CRES?
+      - Necesito hablar con CRES
+      - ¿A qué correo escribo para incidencias del edificio?
+      - ¿Cómo comunico una incidencia a CRES?
+      - ¿Cuál es el email de CRES?
+      - Necesito soporte de CRES

@@ -1,0 +1,11 @@
+﻿utter_faq/fill_timesheet;"El {timesheet_type} se hace de la siguiente manera:
+•	Desde tu browser favorito, dirigite a <a href=""https://login.replicon.com/DefaultV2.aspx?companykey=Capgemini&msg=&code=PleaseLoginToContinue&init="" target=""_blank"">Replicon</a> 
+•	En esta pagina veras que hay un boton que pone &lt;Inice sesión son SALM&gt; pulsa ese boton
+•	En el panel de la izquierda, pasa el ratón por encima y después pincha &lt;My Replicon&gt;
+•	En el panel superior pincha en &lt;Timesheet&gt;
+•	Arriba selecciona mediante los símbolos > y < la semana que quieres rellenar
+•	Mueve con el scroll hacia abajo y verás laz zona de &lt;Time Distribution&gt;
+•	Pulsa el botón: <+ ADD ROW>
+•	En la línea que te aparece, introduce la tarea a facturar, después la actividad, donde trabajas y dónde está tu puesto de trabajo.
+•	A continuación rellenas las horas que has utilizado para hacer esta tarea. Después si tienes más tareas pulsa otra vez el botón <+ ADD ROW>
+•	Cuando hayas terminado pulsa el botón &lt;Submit for Approval&gt; y ya has introducido tus horas de esta semana, si tienes más semanas repite la operación."

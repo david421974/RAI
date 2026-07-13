@@ -1,0 +1,8 @@
+version: "3.1"
+
+intents:
+  - cres
+
+responses:
+  utter_faq/cres:
+    - text: "" # Se deja vacío, el NLG lo rellenará

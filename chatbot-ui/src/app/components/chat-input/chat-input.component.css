@@ -1,0 +1,75 @@
+.chat-input-section {
+  padding: 20px 0;
+}
+
+.input-label {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0256AE; /* Color corporativo */
+  margin: 0 0 12px 0;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.chat-textarea {
+  width: 100%;
+  min-height: 80px;
+  max-height: 200px;
+  padding: 14px 60px 14px 16px; /* Más espacio para el botón solido */
+  border: 2px solid #cce0f5; /* Borde pastel más grueso */
+  border-radius: 16px; /* Más redondeado */
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: #333;
+  resize: vertical;
+  outline: none;
+  transition: all 0.3s ease;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(2, 86, 174, 0.06); /* Sombra azulada muy suave */
+  box-sizing: border-box;
+}
+
+.chat-textarea:focus {
+  border-color: #0256AE;
+  box-shadow: 0 4px 20px rgba(2, 86, 174, 0.15);
+}
+
+.chat-textarea::placeholder {
+  color: #9abce3;
+}
+
+.send-btn {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  width: 42px; /* Botón un poco más grande */
+  height: 42px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0256AE, #1a75d2); /* Gradiente de la marca */
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  padding: 0;
+  box-shadow: 0 4px 10px rgba(2, 86, 174, 0.3);
+}
+
+.send-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #003c82, #0256AE);
+  transform: translateY(-1px);
+}
+
+.send-btn:disabled {
+  background: #cce0f5;
+  color: #fff;
+  box-shadow: none;
+  cursor: default;
+  transform: none;
+}

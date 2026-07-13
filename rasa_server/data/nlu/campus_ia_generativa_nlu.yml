@@ -1,0 +1,26 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/campus_ia_generativa
+    examples: |
+      - ¿Qué es el Campus IA Generativa?
+      - ¿Qué es Generative AI Campus?
+      - ¿En qué consiste el Campus de IA Generativa?
+      - ¿Qué es el Campus IA Generativa de Capgemini?
+      - ¿Para qué sirve el Campus IA Generativa?
+      - ¿Dónde está el Campus IA Generativa?
+      - ¿En qué plataforma se encuentra el Campus IA Generativa?
+      - ¿Desde dónde puedo acceder al Campus IA Generativa?
+      - ¿Qué hay Campus IA Generativa?
+      - ¿El Campus IA Generativa ofrece certificaciones?
+      - ¿Puedo obtener acreditaciones en el Campus IA Generativa?
+      - ¿El Campus IA Generativa da algún tipo de acreditación?
+      - ¿Sirve el Campus IA Generativa para certificarse?
+      - ¿Qué es el campus de IA generativo?
+      - ¿Qué es Campus IA generativa?
+      - ¿Campus generativo de IA qué es?
+      - ¿Qué es el Campus de inteligencia artificial generativa?
+      - ¿Campus IA Generativa para qué sirve?
+      - ¿Dónde está la formación en IA?
+      - ¿Qué formación en IA generativa hay?
+      - ia generativa

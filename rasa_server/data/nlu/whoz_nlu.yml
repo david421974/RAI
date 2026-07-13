@@ -1,0 +1,22 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/whoz
+    examples: |
+      - ¿Cómo actualizo mi currículum?
+      - ¿Cómo actualizo mi currículum en Whoz?
+      - ¿Dónde puedo editar mi curriculum?
+      - ¿Cómo subo mi CV al sistema Whoz?
+      - ¿Cómo entro en GTD?
+      - ¿Cómo entro en Whoz para modificar mi CV?
+      - ¿Dónde se actualiza el GTD?
+      - ¿Cómo edito mi perfil en Whoz?
+      - No encuentro dónde cambiar mi curriculum.
+      - Estoy intentando entrar en GTD pero no sé dónde es.
+      - ¿Cómo se actualiza la información en GTD?
+      - Necesito subir una nueva versión de mi CV, ¿cómo accedo?
+      - Estoy tratando de actualizar mi CV, ¿me ayudas?
+      - Tengo cambios en mi experiencia y quiero actualizarlos en Whoz, ¿cómo entro?
+      - Me piden actualizar GTD pero no sé dónde hacerlo.
+      - ¿Puedes indicarme los pasos para modificar mi curriculum en Whoz?
+      - Necesito añadir un nuevo proyecto a mi CV en Whoz.

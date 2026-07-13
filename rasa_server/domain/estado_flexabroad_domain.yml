@@ -1,0 +1,8 @@
+version: "3.1"
+
+intents:
+  - estado_flexabroad
+
+responses:
+  utter_faq/estado_flexabroad:
+    - text: "" # Se deja vacío, el NGL lo rellenará

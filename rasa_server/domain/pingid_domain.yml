@@ -1,0 +1,8 @@
+version: "3.1"
+
+intents:
+  - pingid
+
+responses:
+  utter_faq/pingid:
+    - text: "" # Se deja vacío, el NLG lo rellenará
