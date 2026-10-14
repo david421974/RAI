@@ -1,0 +1,15 @@
+{
+  "name": "rai-e2e-tests",
+  "version": "1.0.0",
+  "description": "Pruebas de extremo a extremo para el Chatbot RAI",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --ui"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
