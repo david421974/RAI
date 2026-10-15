@@ -2,10 +2,13 @@
 echo "🚀 Iniciando NLG Server..."
 echo "📂 Comprobando acceso a datos en /data..."
 
-if [ -f "/data/$EXCEL_NAME" ]; then
-    echo "✅ Archivo $EXCEL_NAME encontrado."
+# Cuenta cuántos archivos CSV existen en la ruta correcta del contenedor
+NUM_CSVS=$(ls -1 /data/utters/*.csv 2>/dev/null | wc -l)
+
+if [ "$NUM_CSVS" -gt 0 ]; then
+    echo "✅ Se encontraron $NUM_CSVS archivos CSV de respuestas en /data/utters/."
 else
-    echo "⚠️ ADVERTENCIA: No se ve el archivo en /data/$EXCEL_NAME"
+    echo "⚠️ ADVERTENCIA: No se detectan archivos .csv en /data/utters/"
 fi
 
 # Arranca FastAPI

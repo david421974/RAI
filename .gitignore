@@ -14,3 +14,8 @@ nlg_server/__pycache__
 traza.txt
 stats_db_data/global
 stats_db_data/base
+e2e_tests/playwright-report
+e2e_tests/test-results
+e2e_tests/node_modules
+e2e_tests/.env
+e2e_tests/.vscode

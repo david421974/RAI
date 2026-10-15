@@ -35,3 +35,6 @@ Los datos de los Utters se ecnuentran en:
 
 Tamnien encontrarse los datos de los Utters en local en:
 ./Utters
+
+# E2E testing
+Se añaden en el docker compose un contenedor para diseñar y ejecutar tests e2e con playwright.

@@ -39,6 +39,11 @@ services:
     depends_on:
       - rasa_server
       - auth_api           # ← espera a que la API de auth esté lista
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:80 || exit 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
 
   # --- DB PARA ESTADÍSTICAS + USUARIOS ---
   stats_db:
@@ -85,7 +90,8 @@ services:
     container_name: auth_api
     environment:
       - DATABASE_URL=postgresql://stats:stats@stats_db:5432/stats
-      - JWT_SECRET=272cbdae818c499778ac8d6f06e3fd8597a5bde42c7c0a3bff79f5423612caae
+      - JWT_SECRET=f09f6c852152746880b9af42d4177193a10c6df5899b189736bd38813ca14392
+    #  - JWT_SECRET=272cbdae818c499778ac8d6f06e3fd8597a5bde42c7c0a3bff79f5423612caae
       - ALLOWED_DOMAIN=capgemini.com
       - ALLOW_ORIGINS=*
       - TOKEN_EXPIRE_HOURS=8
@@ -107,8 +113,6 @@ services:
     container_name: nlg_server
     volumes:
       - "./Utters:/data/utters:ro"
-    environment:
-      - EXCEL_NAME=${EXCEL_NAME}
     ports:
       - "5006:5006"
     restart: always
@@ -131,5 +135,28 @@ services:
     entrypoint: ["rasa"]
     command: ["--help"]
 
+  # --- CONTENEDOR DE PRUEBAS E2E (PLAYWRIGHT) ---
+  e2e_tests:
+    profiles:
+      - test
+    build:
+      context: ./e2e_tests
+      dockerfile: Dockerfile
+    container_name: e2e_tests
+    ipc: host
+    volumes:
+      - ./e2e_tests:/app
+      - /app/node_modules
+    environment:
+      - BASE_URL=http://rasa_angular_ui:80
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      stats_db:
+        condition: service_healthy
+      auth_api:
+        condition: service_started
+      web_client:
+        condition: service_started
 volumes:
   stats_db_data:

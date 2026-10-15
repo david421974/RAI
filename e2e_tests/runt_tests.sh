@@ -1,0 +1,1 @@
+docker compose --profile test run --build --rm e2e_tests
